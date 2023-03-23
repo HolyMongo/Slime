@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemyMovement : MonoBehaviour
 {
-    [SerializeField] PlayerSO playerso;
+    [SerializeField] EnemySO enemySo;
     GameObject player;
     Rigidbody2D rb;
 
@@ -12,12 +12,14 @@ public class EnemyMovement : MonoBehaviour
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
+        rb = GetComponent<Rigidbody2D>();
     }
 
     
     void FixedUpdate()
     {
         dir = player.transform.position.x - transform.position.x;
-        rb.velocity = new Vector2(dir, rb.velocity.y) * playerso.Speed();
+
+        transform.position = Vector2.MoveTowards(transform.position, player.transform.position, enemySo.Speed());
     }
 }
