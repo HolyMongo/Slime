@@ -10,7 +10,7 @@ public class PlayerInventory : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.collider.CompareTag("Wood"))
+        if (collision.collider.CompareTag("PickUp"))
         {
             for (int i = 0; i < itemInventory.Length; i++)
             {
@@ -18,7 +18,7 @@ public class PlayerInventory : MonoBehaviour
                 {
                     //Adding Item
                     isFull[i] = true;
-                    itemInventory[i] = collision.collider.GetComponent<Wood>().GiveItem();
+                    itemInventory[i] = collision.collider.GetComponent<PickUp>().GiveItem();
                     return;
                 }
             }

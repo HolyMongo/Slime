@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6523f9ef6cdf51844959366a1ccc470a, type: 3}
-  m_Name: Plant 2
+  m_Name: Wood
   m_EditorClassIdentifier: 
-  itemName: 
+  itemName: Wood
   health: 5
-  description: Plant 2
+  description: Wood from a tree

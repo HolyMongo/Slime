@@ -12,10 +12,10 @@ GameObject:
   - component: {fileID: 5222504391834617945}
   - component: {fileID: 5222504391834617944}
   - component: {fileID: 5222504391834617943}
-  - component: {fileID: 4454371968896038919}
+  - component: {fileID: 934636133998081876}
   m_Layer: 0
   m_Name: Body
-  m_TagString: Wood
+  m_TagString: PickUp
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -134,7 +134,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &4454371968896038919
+--- !u!114 &934636133998081876
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -143,10 +143,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 5222504391834617941}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 93ac2fa6a43c3ff4ca77d8941a2daff9, type: 3}
+  m_Script: {fileID: 11500000, guid: 110e3d14ea6122b4dbf6660ff1a85866, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: {fileID: 11400000, guid: c5bc40414da894944818f5449f8877ec, type: 2}
+  item: {fileID: 11400000, guid: cdd8b12a922625b49adfd4932f2ca199, type: 2}
 --- !u!1 &5222504392027091090
 GameObject:
   m_ObjectHideFlags: 0
@@ -159,10 +159,10 @@ GameObject:
   - component: {fileID: 5222504392027091094}
   - component: {fileID: 5222504392027091093}
   - component: {fileID: 5222504392027091092}
-  - component: {fileID: 5857432633869655196}
+  - component: {fileID: 1750187652557105071}
   m_Layer: 0
   m_Name: Body (2)
-  m_TagString: Wood
+  m_TagString: PickUp
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -281,7 +281,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &5857432633869655196
+--- !u!114 &1750187652557105071
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -290,7 +290,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 5222504392027091090}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 93ac2fa6a43c3ff4ca77d8941a2daff9, type: 3}
+  m_Script: {fileID: 11500000, guid: 110e3d14ea6122b4dbf6660ff1a85866, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   item: {fileID: 11400000, guid: cdd8b12a922625b49adfd4932f2ca199, type: 2}
@@ -306,10 +306,10 @@ GameObject:
   - component: {fileID: 5222504392151644992}
   - component: {fileID: 5222504392151645055}
   - component: {fileID: 5222504392151645054}
-  - component: {fileID: 8968594426069806195}
+  - component: {fileID: 8730349046587875974}
   m_Layer: 0
   m_Name: Body (1)
-  m_TagString: Wood
+  m_TagString: PickUp
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -428,7 +428,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &8968594426069806195
+--- !u!114 &8730349046587875974
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -437,10 +437,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 5222504392151645052}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 93ac2fa6a43c3ff4ca77d8941a2daff9, type: 3}
+  m_Script: {fileID: 11500000, guid: 110e3d14ea6122b4dbf6660ff1a85866, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  item: {fileID: 11400000, guid: 64235d5cf6a82244c93bc24a41252f98, type: 2}
+  item: {fileID: 11400000, guid: cdd8b12a922625b49adfd4932f2ca199, type: 2}
 --- !u!1 &5222504393683651717
 GameObject:
   m_ObjectHideFlags: 0

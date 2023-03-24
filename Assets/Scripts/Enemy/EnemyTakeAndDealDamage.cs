@@ -9,6 +9,7 @@ public class EnemyTakeAndDealDamage : MonoBehaviour
     float damage;
     float hp;
     float maxHp;
+    public GameObject prefab;
     void Start()
     {
         speed = enemyso.Speed();
@@ -23,6 +24,7 @@ public class EnemyTakeAndDealDamage : MonoBehaviour
         if (hp <= 0)
         {
             Destroy(gameObject);
+            Instantiate(prefab, transform.position, Quaternion.identity);
         }
     }
 
