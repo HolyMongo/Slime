@@ -396,7 +396,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 149966551}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Ground2.0 (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -435,6 +435,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: TestEnemy (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 3012012543940464672, guid: 534e63fa89b4ab34ba102fbef6eb19d5, type: 3}
+      propertyPath: enemySO.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3012012543940464672, guid: 534e63fa89b4ab34ba102fbef6eb19d5, type: 3}
+      propertyPath: enemySO.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 2374d456af7bfa44f809597733d68d1a, type: 2}
     - target: {fileID: 4846402359387956528, guid: 534e63fa89b4ab34ba102fbef6eb19d5, type: 3}
       propertyPath: points
       value: 
@@ -494,7 +502,7 @@ PrefabInstance:
     - target: {fileID: 8429698121939309294, guid: 534e63fa89b4ab34ba102fbef6eb19d5, type: 3}
       propertyPath: enemySo
       value: 
-      objectReference: {fileID: 11400000, guid: 2374d456af7bfa44f809597733d68d1a, type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 8429698121939309294, guid: 534e63fa89b4ab34ba102fbef6eb19d5, type: 3}
       propertyPath: playerso
       value: 
@@ -517,7 +525,7 @@ GameObject:
   - component: {fileID: 208221794}
   - component: {fileID: 208221796}
   - component: {fileID: 208221795}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Ground_0
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -633,7 +641,7 @@ GameObject:
   - component: {fileID: 345389371}
   - component: {fileID: 345389373}
   - component: {fileID: 345389372}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Ground_0 (4)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -744,7 +752,7 @@ GameObject:
   - component: {fileID: 387534246}
   - component: {fileID: 387534248}
   - component: {fileID: 387534247}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Ground_0
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -1074,7 +1082,7 @@ GameObject:
   - component: {fileID: 478233785}
   - component: {fileID: 478233787}
   - component: {fileID: 478233786}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Ground_0
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -1183,7 +1191,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 519300957}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Ground2.0 (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1421,7 +1429,7 @@ GameObject:
   - component: {fileID: 540770902}
   - component: {fileID: 540770904}
   - component: {fileID: 540770903}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Ground_0 (3)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -1566,7 +1574,7 @@ GameObject:
   - component: {fileID: 593221312}
   - component: {fileID: 593221314}
   - component: {fileID: 593221313}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Ground_0 (2)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -2072,7 +2080,7 @@ GameObject:
   - component: {fileID: 657021707}
   - component: {fileID: 657021709}
   - component: {fileID: 657021708}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Ground_0 (5)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -2324,7 +2332,7 @@ GameObject:
   - component: {fileID: 708312699}
   - component: {fileID: 708312701}
   - component: {fileID: 708312700}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Ground_0 (2)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -2519,7 +2527,7 @@ GameObject:
   - component: {fileID: 853802283}
   - component: {fileID: 853802285}
   - component: {fileID: 853802284}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Ground_0 (1)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -2788,7 +2796,7 @@ GameObject:
   - component: {fileID: 913022764}
   - component: {fileID: 913022766}
   - component: {fileID: 913022765}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Ground_0 (4)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -3034,7 +3042,7 @@ GameObject:
   - component: {fileID: 980160375}
   - component: {fileID: 980160377}
   - component: {fileID: 980160376}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Ground_0
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -3256,6 +3264,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: TestEnemy (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 3012012543940464672, guid: 534e63fa89b4ab34ba102fbef6eb19d5, type: 3}
+      propertyPath: enemySO.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3012012543940464672, guid: 534e63fa89b4ab34ba102fbef6eb19d5, type: 3}
+      propertyPath: enemySO.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 2374d456af7bfa44f809597733d68d1a, type: 2}
     - target: {fileID: 4846402359387956528, guid: 534e63fa89b4ab34ba102fbef6eb19d5, type: 3}
       propertyPath: points
       value: 
@@ -3315,7 +3331,7 @@ PrefabInstance:
     - target: {fileID: 8429698121939309294, guid: 534e63fa89b4ab34ba102fbef6eb19d5, type: 3}
       propertyPath: enemySo
       value: 
-      objectReference: {fileID: 11400000, guid: 2374d456af7bfa44f809597733d68d1a, type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 8429698121939309294, guid: 534e63fa89b4ab34ba102fbef6eb19d5, type: 3}
       propertyPath: playerso
       value: 
@@ -3338,7 +3354,7 @@ GameObject:
   - component: {fileID: 1081103256}
   - component: {fileID: 1081103258}
   - component: {fileID: 1081103257}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Ground_0 (4)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -3581,7 +3597,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1098101087}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Ground2.0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3858,6 +3874,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: TestEnemy (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 3012012543940464672, guid: 534e63fa89b4ab34ba102fbef6eb19d5, type: 3}
+      propertyPath: enemySO.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3012012543940464672, guid: 534e63fa89b4ab34ba102fbef6eb19d5, type: 3}
+      propertyPath: enemySO.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 2374d456af7bfa44f809597733d68d1a, type: 2}
     - target: {fileID: 4846402359387956528, guid: 534e63fa89b4ab34ba102fbef6eb19d5, type: 3}
       propertyPath: points
       value: 
@@ -3917,7 +3941,7 @@ PrefabInstance:
     - target: {fileID: 8429698121939309294, guid: 534e63fa89b4ab34ba102fbef6eb19d5, type: 3}
       propertyPath: enemySo
       value: 
-      objectReference: {fileID: 11400000, guid: 2374d456af7bfa44f809597733d68d1a, type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 8429698121939309294, guid: 534e63fa89b4ab34ba102fbef6eb19d5, type: 3}
       propertyPath: playerso
       value: 
@@ -3938,7 +3962,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1186536261}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Ground2.0 (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4180,7 +4204,7 @@ GameObject:
   - component: {fileID: 1246431353}
   - component: {fileID: 1246431355}
   - component: {fileID: 1246431354}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Ground_0 (3)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -4419,7 +4443,7 @@ GameObject:
   - component: {fileID: 1313290454}
   - component: {fileID: 1313290456}
   - component: {fileID: 1313290455}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Ground_0 (1)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -4530,7 +4554,7 @@ GameObject:
   - component: {fileID: 1345663415}
   - component: {fileID: 1345663417}
   - component: {fileID: 1345663416}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Ground_0 (5)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -4641,7 +4665,7 @@ GameObject:
   - component: {fileID: 1354828702}
   - component: {fileID: 1354828704}
   - component: {fileID: 1354828703}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Ground_0 (2)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -4752,7 +4776,7 @@ GameObject:
   - component: {fileID: 1367990264}
   - component: {fileID: 1367990266}
   - component: {fileID: 1367990265}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Ground_0 (3)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -5082,7 +5106,7 @@ GameObject:
   - component: {fileID: 1399388616}
   - component: {fileID: 1399388618}
   - component: {fileID: 1399388617}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Ground_0 (5)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -5193,7 +5217,7 @@ GameObject:
   - component: {fileID: 1400295948}
   - component: {fileID: 1400295950}
   - component: {fileID: 1400295949}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Ground_0 (1)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -5304,6 +5328,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: TestEnemy (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 3012012543940464672, guid: 534e63fa89b4ab34ba102fbef6eb19d5, type: 3}
+      propertyPath: enemySO.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3012012543940464672, guid: 534e63fa89b4ab34ba102fbef6eb19d5, type: 3}
+      propertyPath: enemySO.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 2374d456af7bfa44f809597733d68d1a, type: 2}
     - target: {fileID: 4846402359387956528, guid: 534e63fa89b4ab34ba102fbef6eb19d5, type: 3}
       propertyPath: points
       value: 
@@ -5312,6 +5344,10 @@ PrefabInstance:
       propertyPath: prefab
       value: 
       objectReference: {fileID: 7488967544177158281, guid: f01f688190e7bfe40a96080a0a8f3461, type: 3}
+    - target: {fileID: 4846402359387956528, guid: 534e63fa89b4ab34ba102fbef6eb19d5, type: 3}
+      propertyPath: enemySo
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 4846402359387956528, guid: 534e63fa89b4ab34ba102fbef6eb19d5, type: 3}
       propertyPath: enemyso
       value: 
@@ -5363,7 +5399,7 @@ PrefabInstance:
     - target: {fileID: 8429698121939309294, guid: 534e63fa89b4ab34ba102fbef6eb19d5, type: 3}
       propertyPath: enemySo
       value: 
-      objectReference: {fileID: 11400000, guid: 2374d456af7bfa44f809597733d68d1a, type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 8429698121939309294, guid: 534e63fa89b4ab34ba102fbef6eb19d5, type: 3}
       propertyPath: playerso
       value: 
@@ -5448,7 +5484,7 @@ GameObject:
   - component: {fileID: 1649112261}
   - component: {fileID: 1649112263}
   - component: {fileID: 1649112262}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Ground_0 (2)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -5559,7 +5595,7 @@ GameObject:
   - component: {fileID: 1667245076}
   - component: {fileID: 1667245078}
   - component: {fileID: 1667245077}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Ground_0 (5)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -5668,7 +5704,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1746863196}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Platforms
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5708,7 +5744,7 @@ GameObject:
   - component: {fileID: 1822826800}
   - component: {fileID: 1822826802}
   - component: {fileID: 1822826801}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Ground_0 (3)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -5996,7 +6032,7 @@ GameObject:
   - component: {fileID: 1996033932}
   - component: {fileID: 1996033934}
   - component: {fileID: 1996033933}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Ground_0 (1)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -6105,6 +6141,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1998429026}
+  - component: {fileID: 1998429034}
   - component: {fileID: 1998429025}
   - component: {fileID: 1998429027}
   - component: {fileID: 1998429028}
@@ -6112,6 +6149,7 @@ GameObject:
   - component: {fileID: 1998429029}
   - component: {fileID: 1998429031}
   - component: {fileID: 1998429032}
+  - component: {fileID: 1998429033}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -6313,6 +6351,34 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   isFull: 00000000000000000000
+--- !u!114 &1998429033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1998429024}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 468d7f080b51f114ca2e06df757a11e8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerso: {fileID: 0}
+--- !u!114 &1998429034
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1998429024}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cdbea478ba0f4ef42900b3f8a29d2ecf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemySO: []
+  playerSO:
+  - {fileID: 11400000, guid: 05c941780a83d7940b50616c916652f2, type: 2}
 --- !u!1001 &2064631844
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6324,6 +6390,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: TestEnemy (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 3012012543940464672, guid: 534e63fa89b4ab34ba102fbef6eb19d5, type: 3}
+      propertyPath: enemySO.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3012012543940464672, guid: 534e63fa89b4ab34ba102fbef6eb19d5, type: 3}
+      propertyPath: enemySO.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 2374d456af7bfa44f809597733d68d1a, type: 2}
     - target: {fileID: 4846402359387956528, guid: 534e63fa89b4ab34ba102fbef6eb19d5, type: 3}
       propertyPath: points
       value: 
@@ -6383,7 +6457,7 @@ PrefabInstance:
     - target: {fileID: 8429698121939309294, guid: 534e63fa89b4ab34ba102fbef6eb19d5, type: 3}
       propertyPath: enemySo
       value: 
-      objectReference: {fileID: 11400000, guid: 2374d456af7bfa44f809597733d68d1a, type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 8429698121939309294, guid: 534e63fa89b4ab34ba102fbef6eb19d5, type: 3}
       propertyPath: playerso
       value: 
@@ -6541,7 +6615,7 @@ GameObject:
   - component: {fileID: 2098371640}
   - component: {fileID: 2098371642}
   - component: {fileID: 2098371641}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Ground_0 (4)
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -6719,6 +6793,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: TestEnemy
       objectReference: {fileID: 0}
+    - target: {fileID: 3012012543940464672, guid: 534e63fa89b4ab34ba102fbef6eb19d5, type: 3}
+      propertyPath: enemySO.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3012012543940464672, guid: 534e63fa89b4ab34ba102fbef6eb19d5, type: 3}
+      propertyPath: enemySO.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 2374d456af7bfa44f809597733d68d1a, type: 2}
     - target: {fileID: 4846402359387956528, guid: 534e63fa89b4ab34ba102fbef6eb19d5, type: 3}
       propertyPath: points
       value: 
@@ -6778,7 +6860,7 @@ PrefabInstance:
     - target: {fileID: 8429698121939309294, guid: 534e63fa89b4ab34ba102fbef6eb19d5, type: 3}
       propertyPath: enemySo
       value: 
-      objectReference: {fileID: 11400000, guid: 2374d456af7bfa44f809597733d68d1a, type: 2}
+      objectReference: {fileID: 0}
     - target: {fileID: 8429698121939309294, guid: 534e63fa89b4ab34ba102fbef6eb19d5, type: 3}
       propertyPath: playerso
       value: 

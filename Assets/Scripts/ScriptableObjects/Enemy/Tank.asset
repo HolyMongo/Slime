@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Tank
   m_EditorClassIdentifier: 
   typeName: Tank
-  maxHp: 1
+  maxHp: 20
   speed: 0.04
   damage: 1
