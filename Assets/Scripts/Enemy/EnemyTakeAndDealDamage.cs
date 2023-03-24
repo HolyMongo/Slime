@@ -10,6 +10,7 @@ public class EnemyTakeAndDealDamage : MonoBehaviour
     float hp;
     float maxHp;
     public GameObject prefab;
+    public GameObject points;
     void Start()
     {
         speed = enemyso.Speed();
@@ -25,6 +26,7 @@ public class EnemyTakeAndDealDamage : MonoBehaviour
         {
             Destroy(gameObject);
             Instantiate(prefab, transform.position, Quaternion.identity);
+            Instantiate(points, transform.position, Quaternion.identity);
         }
     }
 
