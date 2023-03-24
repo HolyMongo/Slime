@@ -9,6 +9,7 @@ public class TakeDamage : MonoBehaviour
     float maxHp;
     void Start()
     {
+        playerso = GetComponent<ChooseSOForTheWholeThing>().GetPlayerSO(0);
         hp = playerso.Hp();
         maxHp = playerso.MaxHp();
     }

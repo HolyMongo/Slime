@@ -4,8 +4,7 @@ using UnityEngine;
 
 public class EnemyTakeAndDealDamage : MonoBehaviour
 {
-    [SerializeField] EnemySO enemyso;
-    float speed;
+    [SerializeField] EnemySO enemySo;
     float damage;
     float hp;
     float maxHp;
@@ -13,9 +12,9 @@ public class EnemyTakeAndDealDamage : MonoBehaviour
     public GameObject points;
     void Start()
     {
-        speed = enemyso.Speed();
-        damage = enemyso.Damage();
-        maxHp = enemyso.MaxHp();
+        enemySo = GetComponent<ChooseSOForTheWholeThing>().GetEnemySO(0);
+        damage = enemySo.Damage();
+        maxHp = enemySo.MaxHp();
         hp = maxHp;
     }
 

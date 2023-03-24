@@ -13,6 +13,7 @@ public class EnemyMovement : MonoBehaviour
     {
         player = GameObject.FindGameObjectWithTag("Player");
         rb = GetComponent<Rigidbody2D>();
+        enemySo = GetComponent<ChooseSOForTheWholeThing>().GetEnemySO(0);
     }
 
     

@@ -16,6 +16,7 @@ public class simpleShootToMouse : MonoBehaviour
     Vector3 dir;
     void Start()
     {
+        playerso = GetComponent<ChooseSOForTheWholeThing>().GetPlayerSO(0);
         playerCam = GameObject.Find("Player Camera").GetComponent<Camera>();
     }
 

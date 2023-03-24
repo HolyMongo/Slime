@@ -24,6 +24,7 @@ public class BasicMovement : MonoBehaviour
     
     void Start()
     {
+        playerso = GetComponent<ChooseSOForTheWholeThing>().GetPlayerSO(0);
         rb = GetComponent<Rigidbody2D>();
         bc = GetComponent<BoxCollider2D>();
 

@@ -9,6 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8276035993567341946}
+  - component: {fileID: 3012012543940464672}
   - component: {fileID: 4792316693533208848}
   - component: {fileID: 4846402359387956528}
   - component: {fileID: 8429698121939309294}
@@ -36,6 +37,19 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &3012012543940464672
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 833935344122107917}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cdbea478ba0f4ef42900b3f8a29d2ecf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemySO: []
 --- !u!61 &4792316693533208848
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -74,7 +88,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d16c4c90dba793347a42762f4fea4fb1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyso: {fileID: 0}
+  enemySo: {fileID: 0}
+  prefab: {fileID: 0}
+  points: {fileID: 0}
 --- !u!114 &8429698121939309294
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -87,6 +103,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d4394932c3fc594eba9a7f14c4b2a74, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  enemySo: {fileID: 0}
 --- !u!50 &2198160561409487076
 Rigidbody2D:
   serializedVersion: 4
