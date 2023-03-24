@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Enemy
   - Ground
+  - Wood
   layers:
   - Default
   - TransparentFX
