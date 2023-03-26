@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class NPCUI : MonoBehaviour
 {
-    QuestInventory player;
+    QuestInventory player; 
 
     NPC _NPC;
 
@@ -24,10 +24,16 @@ public class NPCUI : MonoBehaviour
             else if (player.Quests[i] == null)
             {
                 player.Quests[i] = _NPC.Quest;
+                QuestInventory.QuestScore += 1;
+                player.questText.text = "Quests: " + QuestInventory.QuestScore;
                 break;
             }
 
         }
+    }
+    public void Complete()
+    {
+        // Things
     }
 
 }

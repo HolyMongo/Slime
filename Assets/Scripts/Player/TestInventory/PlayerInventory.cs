@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class PlayerInventory : MonoBehaviour
 {
-    [SerializeField] private Items[] itemInventory;
-    [SerializeField] private bool[] isFull;
+    public Items[] itemInventory;
+    public bool[] isFull;
 
 
     private void OnCollisionEnter2D(Collision2D collision)
