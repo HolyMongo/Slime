@@ -21,12 +21,15 @@ public class BasicMovement : MonoBehaviour
     [SerializeField][Range(1,10)]
     float lowJumpMultiplier = 2f;
     //bool IsFalling;
+
+    private AudioSource aD;
     
     void Start()
     {
         playerso = GetComponent<ChooseSOForTheWholeThing>().GetPlayerSO(0);
         rb = GetComponent<Rigidbody2D>();
         bc = GetComponent<BoxCollider2D>();
+        aD = GetComponent<AudioSource>();
 
         speed = playerso.Speed();
         jumpPower = playerso.JumpPower();
@@ -37,6 +40,7 @@ public class BasicMovement : MonoBehaviour
         if (Input.GetButtonDown("Jump"))
         {
             jumpBuffer = 0.12f;
+         
         }
         if (GroundCheck())
         {
@@ -50,6 +54,7 @@ public class BasicMovement : MonoBehaviour
         if (Input.GetButtonDown("Jump") && groundedBuffer > 0 || jumpBuffer > 0 && groundedBuffer > 0)
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpPower);
+            aD.Play();
         }
 
 

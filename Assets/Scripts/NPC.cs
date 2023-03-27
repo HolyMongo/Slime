@@ -76,7 +76,7 @@ public class NPC : MonoBehaviour
     {
         for (int i = 0; i < inventory.itemInventory.Length; i++)
         {
-            if (inventory.itemInventory[i] == Quest.questItems)
+            if (inventory.itemInventory[i] == Quest.questItems && player.Quests[i] != null)
             {
                 QuestInventory.QuestScore -= 1;
                 player.questText.text = "Quests: " + QuestInventory.QuestScore;
