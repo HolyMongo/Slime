@@ -8,6 +8,7 @@ TagManager:
   - Ground
   - Wood
   - PickUp
+  - Nodes
   layers:
   - Default
   - TransparentFX
