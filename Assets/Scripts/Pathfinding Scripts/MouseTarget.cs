@@ -10,6 +10,7 @@ public class MouseTarget : MonoBehaviour
     [SerializeField] private Transform circle;
     [SerializeField] private Transform square;
 
+    [SerializeField] private Camera cam;
     private void Awake()
     {
 
@@ -21,7 +22,7 @@ public class MouseTarget : MonoBehaviour
     {
         if (Input.GetMouseButtonDown(0))
         {
-            mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            mousePos = cam.ScreenToWorldPoint(Input.mousePosition);
             Vector3 aux = new Vector3(mousePos.x, mousePos.y, 0);
             circle.position = aux;
             Bots.First().Target = circle;
