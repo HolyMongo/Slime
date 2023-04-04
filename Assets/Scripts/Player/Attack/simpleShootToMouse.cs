@@ -33,7 +33,7 @@ public class simpleShootToMouse : MonoBehaviour
             dir = mousePosition - transform.localPosition;
             GameObject bulletClone = Object.Instantiate(bullet, transform.position + new Vector3(0, 0.1f, 0), Quaternion.identity);
             bulletClone.GetComponent<Rigidbody2D>().velocity = new Vector2(dir.x, dir.y).normalized * speed;
-            bulletClone.GetComponent<Bullet>().ChangeSO(playerso);
+            bulletClone.GetComponent<PlayerBullet>().ChangeSO(playerso);
         }
     }
 }
