@@ -10,11 +10,13 @@ public class ShootTowardsPlayer : MonoBehaviour
     [SerializeField] Transform exitPoint;
 
     Transform player;
+    AudioSource aD;
 
     void Start()
     {
         So = GetComponent<ChooseSOForTheWholeThing>().GetEnemySO(0);
         detectionRange = GetComponent<CircleCollider2D>();
+        aD = GetComponent<AudioSource>();
     }
 
 
@@ -43,5 +45,6 @@ public class ShootTowardsPlayer : MonoBehaviour
         GameObject bulletClone = Object.Instantiate(bullet, exitPoint.position + new Vector3(0, 0.1f, 0), Quaternion.identity);
         bulletClone.SetActive(true);
         bulletClone.GetComponent<Rigidbody2D>().velocity = new Vector2(dir.x, dir.y).normalized * 5;
+        aD.Play();
     }
 }
