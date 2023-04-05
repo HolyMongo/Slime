@@ -85,6 +85,10 @@ public class BasicMovement : MonoBehaviour
         {
             anim.Play("SlimeRight");
         }
+      else if(xDir == 0)
+        {
+            anim.Play("Slimeidle");
+        }
 
         rb.velocity = new Vector2(xDir * speed, rb.velocity.y);
     }
