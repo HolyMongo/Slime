@@ -23,7 +23,12 @@ public class BasicMovement : MonoBehaviour
     //bool IsFalling;
 
     private AudioSource aD;
-    
+    private Animator anim;
+    //public AnimationClip idle;
+    //public AnimationClip jump;
+    //public AnimationClip left;
+    //public AnimationClip right;
+    float xDir;
     void Start()
     {
         playerso = GetComponent<ChooseSOForTheWholeThing>().GetPlayerSO(0);
@@ -33,6 +38,8 @@ public class BasicMovement : MonoBehaviour
 
         speed = playerso.Speed();
         jumpPower = playerso.JumpPower();
+        anim = GetComponent<Animator>();
+        anim.Play("Slimeidle");
     }
 
     private void Update()
@@ -55,18 +62,31 @@ public class BasicMovement : MonoBehaviour
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpPower);
             aD.Play();
+            anim.Play("SlimeJump");
         }
 
-
+       
         jumpBuffer -= Time.deltaTime;
         groundedBuffer -= Time.deltaTime;
+        xDir = Input.GetAxisRaw("Horizontal");
+
+        if(xDir == 0 && groundedBuffer <= 0)
+        {
+            anim.Play("Slimeidle");
+        }
     }
     void FixedUpdate()
     {
-        float xDir = Input.GetAxisRaw("Horizontal");
+      if(xDir == -1)
+        {
+            anim.Play("SlimeLeft");
+        }
+      else if(xDir == 1)
+        {
+            anim.Play("SlimeRight");
+        }
 
         rb.velocity = new Vector2(xDir * speed, rb.velocity.y);
-
     }
 
     public void LessFloatyJump()

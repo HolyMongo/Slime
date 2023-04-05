@@ -51,7 +51,6 @@ SpriteAtlas:
     - {fileID: 2800000, guid: 5dbaf3a5b9ab2574ea6f80e609d2cc55, type: 3}
     - {fileID: 2800000, guid: 989fcfc4aa1445f4bb636635cf6fbb0c, type: 3}
     - {fileID: 2800000, guid: 9d50c7b32af202043bd1a7c46b05fff5, type: 3}
-    - {fileID: 2800000, guid: c386170d8df67444cb97142343687ac9, type: 3}
     - {fileID: 2800000, guid: 5b50e50790511cf4586eeb9d66517fe8, type: 3}
     bindAsDefault: 1
     isAtlasV2: 0
@@ -96,20 +95,6 @@ SpriteAtlas:
   - {fileID: 1051974884, guid: 0f46d1fcbdf4d5a4fa98dfe485706664, type: 3}
   - {fileID: 1886152400, guid: 0f46d1fcbdf4d5a4fa98dfe485706664, type: 3}
   - {fileID: -1231615287, guid: 0f46d1fcbdf4d5a4fa98dfe485706664, type: 3}
-  - {fileID: 1534193910, guid: c386170d8df67444cb97142343687ac9, type: 3}
-  - {fileID: -1100532988, guid: c386170d8df67444cb97142343687ac9, type: 3}
-  - {fileID: 2023971280, guid: c386170d8df67444cb97142343687ac9, type: 3}
-  - {fileID: 1973725256, guid: c386170d8df67444cb97142343687ac9, type: 3}
-  - {fileID: 56625803, guid: c386170d8df67444cb97142343687ac9, type: 3}
-  - {fileID: -267103878, guid: c386170d8df67444cb97142343687ac9, type: 3}
-  - {fileID: -1237164363, guid: c386170d8df67444cb97142343687ac9, type: 3}
-  - {fileID: 1312307530, guid: c386170d8df67444cb97142343687ac9, type: 3}
-  - {fileID: -1546792250, guid: c386170d8df67444cb97142343687ac9, type: 3}
-  - {fileID: 2002155946, guid: c386170d8df67444cb97142343687ac9, type: 3}
-  - {fileID: 173234473, guid: c386170d8df67444cb97142343687ac9, type: 3}
-  - {fileID: 2058220241, guid: c386170d8df67444cb97142343687ac9, type: 3}
-  - {fileID: 56511817, guid: c386170d8df67444cb97142343687ac9, type: 3}
-  - {fileID: 1388428984, guid: c386170d8df67444cb97142343687ac9, type: 3}
   - {fileID: 1724509948, guid: cc5541ad3b80b4c46aa4fd2d9b46ba90, type: 3}
   - {fileID: 1745662176, guid: cc5541ad3b80b4c46aa4fd2d9b46ba90, type: 3}
   - {fileID: 1224624712, guid: cc5541ad3b80b4c46aa4fd2d9b46ba90, type: 3}
@@ -154,20 +139,6 @@ SpriteAtlas:
   - ColorPalette1_0
   - ColorPalette1_9
   - ColorPalette1_8
-  - RealFlower-Sheet_6
-  - RealFlower-Sheet_10
-  - RealFlower-Sheet_11
-  - RealFlower-Sheet_12
-  - RealFlower-Sheet_13
-  - RealFlower-Sheet_9
-  - RealFlower-Sheet_8
-  - RealFlower-Sheet_1
-  - RealFlower-Sheet_0
-  - RealFlower-Sheet_3
-  - RealFlower-Sheet_2
-  - RealFlower-Sheet_5
-  - RealFlower-Sheet_4
-  - RealFlower-Sheet_7
   - Grass-Sheet-Sheet_4
   - Grass-Sheet-Sheet_2
   - Grass-Sheet-Sheet_3
