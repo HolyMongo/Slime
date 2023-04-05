@@ -919,7 +919,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5048716091506705163, guid: e4687787e2cd3754daedc67083b4b290, type: 3}
       propertyPath: SceneToLoad
-      value: Playground
+      value: Intro
       objectReference: {fileID: 0}
     - target: {fileID: 8049364126919259000, guid: e4687787e2cd3754daedc67083b4b290, type: 3}
       propertyPath: m_RootOrder
@@ -7250,7 +7250,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: baa03802f515ba445884789967ca0375, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  NewGameString: Playground
+  NewGameString: Intro
 --- !u!114 &1869655846
 MonoBehaviour:
   m_ObjectHideFlags: 0
