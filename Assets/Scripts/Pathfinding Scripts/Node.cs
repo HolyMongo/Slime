@@ -76,7 +76,7 @@ public class Node : MonoBehaviour
 
     }
 
-    [MenuItem("GameObject/AIPath/Node")]
+    //[MenuItem("GameObject/AIPath/Node")]
     public static GameObject InstantiateNode()
     {
         List<Node> AllNodes = FindObjectsOfType<Node>().ToList();
@@ -88,7 +88,7 @@ public class Node : MonoBehaviour
         return ob;
     }
 
-    [ContextMenu("Make Conection")]
+    //[ContextMenu("Make Conection")]
     void MakeConection()
     {
         conection = true;
@@ -211,10 +211,10 @@ public class Node : MonoBehaviour
     }
     void OnEnable()
     {
-        SceneView.duringSceneGui += SceneGUI;
+       // SceneView.duringSceneGui += SceneGUI;
     }
 
-    void SceneGUI(SceneView sceneView)
+    /*void SceneGUI(SceneView sceneView)
     {
         Event cur = Event.current;
 
@@ -237,5 +237,5 @@ public class Node : MonoBehaviour
             Handles.DrawLine(transform.position, mousePos);
         }
     }
-
+    */
 }
