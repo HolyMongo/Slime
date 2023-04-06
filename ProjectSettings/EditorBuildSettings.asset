@@ -18,9 +18,12 @@ EditorBuildSettings:
     path: Assets/Scenes/Tutorial.unity
     guid: a7073952627597c4ba7f5afbda0a213d
   - enabled: 1
-    path: Assets/Scenes/Playground.unity
+    path: Assets/Scenes/FlowerForest.unity
     guid: f3b5345402c5c304fbaf8a837bd55962
   - enabled: 1
     path: Assets/Scenes/Castle.unity
     guid: 23c39eee2aef006418389d7fb22eedb6
+  - enabled: 1
+    path: Assets/Scenes/RainyMountains.unity
+    guid: 0a7e99ee4d517eb408aff1580f199850
   m_configObjects: {}
