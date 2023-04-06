@@ -919,7 +919,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5048716091506705163, guid: e4687787e2cd3754daedc67083b4b290, type: 3}
       propertyPath: SceneToLoad
-      value: Intro
+      value: BeforeIntro
       objectReference: {fileID: 0}
     - target: {fileID: 8049364126919259000, guid: e4687787e2cd3754daedc67083b4b290, type: 3}
       propertyPath: m_RootOrder

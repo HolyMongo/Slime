@@ -39,7 +39,6 @@ public class BasicMovement : MonoBehaviour
         speed = playerso.Speed();
         jumpPower = playerso.JumpPower();
         anim = GetComponent<Animator>();
-        anim.Play("Slimeidle");
     }
 
     private void Update()
@@ -61,35 +60,38 @@ public class BasicMovement : MonoBehaviour
         if (Input.GetButtonDown("Jump") && groundedBuffer > 0 || jumpBuffer > 0 && groundedBuffer > 0)
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpPower);
+         
             aD.Play();
-            anim.Play("SlimeJump");
+           
         }
+       
 
        
         jumpBuffer -= Time.deltaTime;
         groundedBuffer -= Time.deltaTime;
         xDir = Input.GetAxisRaw("Horizontal");
 
-        if(xDir == 0 && groundedBuffer <= 0)
+        if(xDir == 0)
         {
-            anim.Play("Slimeidle");
+            anim.SetBool("IsWalking", false);
+           
+        }
+        else
+        {
+            anim.SetBool("IsWalking", true);
+           
+        }
+        if(xDir < 0)
+        {
+            transform.localScale = new Vector3(-1, 1, 1);
+        }
+        else if(xDir > 0)
+        {
+            transform.localScale = new Vector3(1, 1, 1);
         }
     }
     void FixedUpdate()
     {
-      if(xDir == -1)
-        {
-            anim.Play("SlimeLeft");
-        }
-      else if(xDir == 1)
-        {
-            anim.Play("SlimeRight");
-        }
-      else if(xDir == 0)
-        {
-            anim.Play("Slimeidle");
-        }
-
         rb.velocity = new Vector2(xDir * speed, rb.velocity.y);
     }
 
@@ -128,10 +130,12 @@ public class BasicMovement : MonoBehaviour
         if (rayHit2D.collider != null)
         {
             rayColor = Color.green;
+            anim.SetBool("IsJumping", false);
         }
         else
         {
             rayColor = Color.red;
+            anim.SetBool("IsJumping", true);
         }
         Debug.DrawRay(bc.bounds.center + new Vector3(bc.bounds.extents.x, 0f), Vector2.down * (bc.bounds.extents.y + extraHeight), rayColor);
         Debug.DrawRay(bc.bounds.center - new Vector3(bc.bounds.extents.x, 0f), Vector2.down * (bc.bounds.extents.y + extraHeight), rayColor);
