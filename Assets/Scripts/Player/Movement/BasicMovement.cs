@@ -81,6 +81,7 @@ public class BasicMovement : MonoBehaviour
             anim.SetBool("IsWalking", true);
            
         }
+        // På grund av dessa 2 if statements går det inte att höja Slime scale
         if(xDir < 0)
         {
             transform.localScale = new Vector3(-1, 1, 1);
