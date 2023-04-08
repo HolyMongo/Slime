@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using Cinemachine;
 
 public class SimpleShootAndMele : MonoBehaviour
 {
@@ -48,12 +49,18 @@ public class SimpleShootAndMele : MonoBehaviour
             Shoot();
         }
 
-        if (Input.GetKey(KeyCode.Mouse1) && meleColdown < 0 && switchColdown < 0)
+        if (Input.GetKey(KeyCode.Mouse1))
         {
             meleColdown = playerSo.Attackspeed();
             switchColdown = 0.1f;
             Mele();
         }
+        //if (Input.GetKey(KeyCode.Mouse1) && meleColdown < 0 && switchColdown < 0)
+        //{
+        //    meleColdown = playerSo.Attackspeed();
+        //    switchColdown = 0.1f;
+        //    Mele();
+        //}
     }
 
     private void Shoot()
@@ -71,8 +78,9 @@ public class SimpleShootAndMele : MonoBehaviour
         rot = mousePosition - transform.position;
         float rotz = Mathf.Atan2(rot.y, rot.x) * Mathf.Rad2Deg;
 
-        //kanske kan använda den här
-        /*
+       
+
+       
         if (transform.localScale.x >= 0)
         {
             rotatePoint.transform.rotation = Quaternion.Euler(0, 0, rotz);
@@ -81,7 +89,7 @@ public class SimpleShootAndMele : MonoBehaviour
         {
             rotatePoint.transform.rotation = Quaternion.Euler(-1, 0, rotz);
         }
-        */
+       
 
         meleOrigin.SetActive(true);
         RaycastHit2D hit = Physics2D.BoxCast(new Vector2(meleOrigin.transform.position.x, meleOrigin.transform.position.y), new Vector2(meleRange.bounds.extents.x, meleRange.bounds.extents.y), 0, Vector2.down, 1, enemyMask);
@@ -95,7 +103,7 @@ public class SimpleShootAndMele : MonoBehaviour
                 Debug.Log("Hit Enemy");
             }
         }
-        StartCoroutine(waiter());
+      //  StartCoroutine(waiter());
     }
 
     IEnumerator waiter()

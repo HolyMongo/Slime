@@ -497,12 +497,9 @@ GameObject:
   - component: {fileID: 724397316}
   - component: {fileID: 724397315}
   - component: {fileID: 724397314}
-  - component: {fileID: 724397313}
-  - component: {fileID: 724397312}
   - component: {fileID: 724397311}
-  - component: {fileID: 724397310}
   - component: {fileID: 724397309}
-  - component: {fileID: 724397308}
+  - component: {fileID: 724397320}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -526,26 +523,6 @@ Transform:
   m_Father: {fileID: 1804057319}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &724397308
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 724397306}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 0a2bf07bc7dcb2a4897cc974e2b4905c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bullet: {fileID: 3371451850128232049, guid: 71258efdf5e8ca5419e01cd400a2d0c3, type: 3}
-  speed: 10
-  rotatePoint: {fileID: 1643025244}
-  meleOrigin: {fileID: 866517930}
-  enemyMask:
-    serializedVersion: 2
-    m_Bits: 128
-  playerCam: {fileID: 2100012020}
 --- !u!82 &724397309
 AudioSource:
   m_ObjectHideFlags: 0
@@ -642,20 +619,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
---- !u!114 &724397310
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 724397306}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: dd60cb073cc6ad543bd3006c798154d4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  Quests: []
-  questText: {fileID: 0}
 --- !u!114 &724397311
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -669,45 +632,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerso: {fileID: 0}
---- !u!114 &724397312
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 724397306}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b889e6b855a004748801e6e9bcf4203d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  itemInventory:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  isFull: 00000000000000000000
---- !u!114 &724397313
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 724397306}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 92cb8e2d5fe90214f97eca4c6983c89d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerso: {fileID: 11400000, guid: 05c941780a83d7940b50616c916652f2, type: 2}
-  bullet: {fileID: 3371451850128232049, guid: 71258efdf5e8ca5419e01cd400a2d0c3, type: 3}
-  speed: 19
 --- !u!212 &724397314
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -862,6 +786,26 @@ MonoBehaviour:
   playerSO:
   - {fileID: 11400000, guid: 05c941780a83d7940b50616c916652f2, type: 2}
   SO: []
+--- !u!114 &724397320
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 724397306}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0a2bf07bc7dcb2a4897cc974e2b4905c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bullet: {fileID: 3371451850128232049, guid: 71258efdf5e8ca5419e01cd400a2d0c3, type: 3}
+  speed: 10
+  rotatePoint: {fileID: 1643025244}
+  meleOrigin: {fileID: 866517930}
+  enemyMask:
+    serializedVersion: 2
+    m_Bits: 128
+  playerCam: {fileID: 2100012020}
 --- !u!1 &866517930
 GameObject:
   m_ObjectHideFlags: 0
@@ -1494,7 +1438,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 8ec45a677c05c1f479171596f7fb0ba9, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
@@ -1591,7 +1535,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d16c4c90dba793347a42762f4fea4fb1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemySo: {fileID: 0}
+  enemySo: {fileID: 11400000, guid: 5e0cb0189cb39dd419a9e8a14e708d2e, type: 2}
   prefab: {fileID: 7488967544177158281, guid: f01f688190e7bfe40a96080a0a8f3461, type: 3}
   points: {fileID: 5993980178144965579, guid: e9c49661da59dac4d8f5fab4b8a39070, type: 3}
 --- !u!1 &1643025244
