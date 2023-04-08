@@ -15,9 +15,6 @@ GameObject:
   - component: {fileID: 8429698121939309294}
   - component: {fileID: 2198160561409487076}
   - component: {fileID: 2406159410503821109}
-  - component: {fileID: 7500973485799433011}
-  - component: {fileID: 505055211797620641}
-  - component: {fileID: 4668725244010986601}
   m_Layer: 0
   m_Name: TestEnemy
   m_TagString: Enemy
@@ -55,6 +52,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   enemySO: []
   playerSO: []
+  SO: []
 --- !u!61 &4792316693533208848
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -146,48 +144,6 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
---- !u!114 &7500973485799433011
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 833935344122107917}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2766d9be96bf4d841b47af3ce63d1849, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &505055211797620641
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 833935344122107917}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5ff6b540afa55db46a605617dff4421e, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  DrawPath: 0
-  speed: 0
-  maxDistanceToJump: 0
-  Target: {fileID: 0}
-  Path: []
-  LastNode: {fileID: 0}
---- !u!114 &4668725244010986601
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 833935344122107917}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ef006e9cbe308b140a2678dba2dd6e88, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &9075614677656383042
 GameObject:
   m_ObjectHideFlags: 0
