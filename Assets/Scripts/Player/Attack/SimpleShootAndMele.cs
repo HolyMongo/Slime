@@ -59,7 +59,7 @@ public class SimpleShootAndMele : MonoBehaviour
         //{
         //    meleColdown = playerSo.Attackspeed();
         //    switchColdown = 0.1f;
-        //    Mele();
+        //    Mele(); 
         //}
     }
 
