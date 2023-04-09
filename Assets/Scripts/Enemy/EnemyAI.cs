@@ -5,121 +5,106 @@ using Pathfinding;
 
 public class EnemyAI : MonoBehaviour
 {
-    [Header("Pathfinding")]
-    public Transform target;
-    public float activateDistance = 50f;
-    public float pathUpdateTimer = 0.5f;
+    [SerializeField] Transform target;
+    [SerializeField] float speed = 400f;
+    [SerializeField] float nextWaypointDistance = 3f;
+    [SerializeField] Transform enemyGFX;
 
-    [Header("Physics")]
-    public float speed = 200f;
-    public float nextWaypointDistance = 3f;
-    public float jumpNodeHeightRequirement = 0.8f;
-    public float jumpModifier = 0.3f;
-    public float jumpCheckOffset = 0.1f;
+    [SerializeField] CircleCollider2D detectionRange;
 
-    [Header("Cutom Behavior")]
-    public bool jumpEnabled = true;
-    public bool followEnabled = true;
-    public bool directionLookEnabled = true;
+    Path path;
+    int currentWaypoint = 0;
+    bool reachedEndOfPath = false;
 
-    private Path path;
-    private int currentWaypoint = 0;
-    private bool isGrounded = false;
-    Rigidbody2D rb;
     Seeker seeker;
-
+    Rigidbody2D rb;
 
     private void Start()
     {
         seeker = GetComponent<Seeker>();
         rb = GetComponent<Rigidbody2D>();
+        //InvokeRepeating("UpdatePath", 0f, 0.5f);
+        //seeker.StartPath(rb.position, target.position, OnPathComplete);
 
-        InvokeRepeating("UpdatePath", 0f, pathUpdateTimer);
+        detectionRange = GetComponent<CircleCollider2D>();
+        detectionRange.isTrigger = true;
+        detectionRange.radius = 10;
     }
 
-    private void UpdatePath()
+    void UpdatePath()
     {
-        if (TargetInDistance() && followEnabled && seeker.IsDone())
+        if (seeker.IsDone())
         {
             seeker.StartPath(rb.position, target.position, OnPathComplete);
         }
     }
 
-    private void FixedUpdate()
+    private void OnPathComplete(Path p)
     {
-        if (TargetInDistance() && followEnabled)
+        if (!p.error)
         {
-            PathFollow();
+            path = p;
+            currentWaypoint = 0;
         }
     }
 
-    private void PathFollow()
+    void FixedUpdate()
     {
-        //Does not have a path
         if (path == null)
         {
             return;
         }
 
-        //Reached end of path
         if (currentWaypoint >= path.vectorPath.Count)
         {
+            reachedEndOfPath = true;
             return;
         }
+        else
+        {
+            reachedEndOfPath = false;
+        }
 
-        //see if colliding with anything
-        Vector3 startOffset = transform.position - new Vector3(0f, GetComponent<Collider2D>().bounds.extents.y + jumpCheckOffset);
-        isGrounded = Physics2D.Raycast(startOffset, -Vector3.up, 0.05f);
-
-        //Direction calculation
         Vector2 direction = ((Vector2)path.vectorPath[currentWaypoint] - rb.position).normalized;
         Vector2 force = direction * speed * Time.deltaTime;
 
-        //jump
-        if (jumpEnabled && isGrounded)
-        {
-            if (direction.y > jumpNodeHeightRequirement)
-            {
-                rb.AddForce(Vector2.up * speed * jumpModifier);
-            }
-        }
-
-        //movement
         rb.AddForce(force);
 
-        //Next waypoint
         float distance = Vector2.Distance(rb.position, path.vectorPath[currentWaypoint]);
+
         if (distance < nextWaypointDistance)
         {
             currentWaypoint++;
         }
 
-        //Direction Graphics Handling
-        if (directionLookEnabled)
+        if (force.x >= 0.01f)
         {
-            if (rb.velocity.x > 0.05f)
-            {
-                transform.localScale = new Vector3(-1f * Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
-                //transform.localScale = new Vector3(-1f, 1f, 1f); perhaps a better way
-            }
-            else if (rb.velocity.x < -0.05f)
-            {
-                transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x), transform.localScale.y, transform.localScale.z);
-            }
+            enemyGFX.localScale = new Vector3(-1f, 1f, 1f);
+        }
+        else if (force.x <= 0.01f)
+        {
+            enemyGFX.localScale = new Vector3(1f, 1f, 1f);
         }
     }
 
-    private bool TargetInDistance()
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        return Vector2.Distance(transform.position, target.transform.position) < activateDistance;
-    }
-
-    private void OnPathComplete(Path _p)
-    {
-        if (!_p.error)
+        if (collision.CompareTag("Player"))
         {
-            path = _p;
-            currentWaypoint = 0;
+            detectionRange.radius = 15;
+            target = collision.transform;
+            InvokeRepeating("UpdatePath", 0f, 0.5f);
+        }
+    }
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player"))
+        {
+            detectionRange.radius = 10;
+            target = gameObject.transform;
+            CancelInvoke("UpdatePath");
+            seeker.StartPath(rb.position, target.position, OnPathComplete);
+            
         }
     }
 }
