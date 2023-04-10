@@ -195,12 +195,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 171820265}
+  - component: {fileID: 171820268}
   - component: {fileID: 171820264}
   - component: {fileID: 171820263}
   - component: {fileID: 171820262}
   - component: {fileID: 171820261}
   - component: {fileID: 171820266}
-  m_Layer: 0
+  - component: {fileID: 171820267}
+  m_Layer: 7
   m_Name: Flying Enemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -242,7 +244,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 724397307}
   speed: 400
-  nextWaypointDistance: 3
+  nextWaypointDistance: 2
   enemyGFX: {fileID: 1526077065}
   detectionRange: {fileID: 0}
 --- !u!58 &171820263
@@ -321,6 +323,41 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.5
+--- !u!114 &171820267
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 171820260}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d16c4c90dba793347a42762f4fea4fb1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemySo: {fileID: 0}
+  prefab: {fileID: 7488967544177158281, guid: f01f688190e7bfe40a96080a0a8f3461, type: 3}
+  points: {fileID: 5993980178144965579, guid: e9c49661da59dac4d8f5fab4b8a39070, type: 3}
+  attackRange: 2
+  attackLayer:
+    serializedVersion: 2
+    m_Bits: 256
+--- !u!114 &171820268
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 171820260}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cdbea478ba0f4ef42900b3f8a29d2ecf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  enemySO:
+  - {fileID: 11400000, guid: 5e0cb0189cb39dd419a9e8a14e708d2e, type: 2}
+  playerSO: []
+  SO: []
 --- !u!1 &362054283 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1364916303336297140, guid: ccd0a7dd59e13744596035b005c06ca4, type: 3}
@@ -672,7 +709,7 @@ GameObject:
   m_Component:
   - component: {fileID: 517716860}
   - component: {fileID: 517716861}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: handle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1724,7 +1761,7 @@ GameObject:
   - component: {fileID: 724397311}
   - component: {fileID: 724397309}
   - component: {fileID: 724397320}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Player
   m_TagString: Player
   m_Icon: {fileID: 0}
@@ -2049,7 +2086,7 @@ GameObject:
   - component: {fileID: 866517931}
   - component: {fileID: 866517933}
   - component: {fileID: 866517932}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: attackThing
   m_TagString: Untagged
   m_Icon: {fileID: 7148428337604731935, guid: 0000000000000000d000000000000000, type: 0}
@@ -2158,7 +2195,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 871477513}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: idlePosition
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2189,7 +2226,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 931962690}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: AttackPosition
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2382,7 +2419,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   version: 1
   data:
-    dataString: UEsDBBQAAAgIAAAIIewOGE1vfgIAADYFAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFlVE1zmzAQ/SsenWuPIDaY3lrHcXpw4onTyYWLLBajsZAYSfgjGf/3SgIMcbkg3n69fbviCzGhK6BGqpVi2VpmgH6OkDujH6Pe+Axnspdiyz6h8/lgmSmcE/E+b8QwafHAhWlZglGM/hJ77pyxBWvBcqnKZbaHhdRGWzgnXIM1KWlctLDQ1wid7WucuJCLPYWxO33aU4JHV3ukIAyogessmURh/DANwzYET5J5iKNpOI3b0GASzyIcBfFsOcaxT1MLyklZQeZ66rNNgwl2z8O8TRbMvbuwXbeerkMqOWe6pYzMpfKSvJGLEyRjxLbvOTrfAti+MK6VYeBrnmswrTaKXB6Zsio2GdFv2UhbEn1ouB0Jr12NaOrpNDnX/5nHgTfnSpbPXdkAuxKmYPRgCVKizUD6Ifz4nXctToQfyI7DRwHiRa6UrEVmjUbVLrTWED72n7fOFgXQQ483VO/Auuol7ybdzdn1cPXNnxeclTs/0WkDbLn0Uvv1AGWH8scS9suj2xQWdSz+angn++GWtYYnprSxprZL4ejtZK2cK1p6zVw3tVlIJcDDLekKBOHmsrFpzP0E72yDsneWJ+LuU1u8tXXX5C7Ew70/xnemjTzdhqULeVqDLl5rw5mAnrQzvFidFlKIZsGGmnRh21rlhA7C9jXLvq8WojicB5iGUfyQk12YjGeY4GiGqb1ZsygJE+R3jwnbJ+Gbhmgrj52a6JMLu2fdb2a0UqTyy54pclqxz1IOJGcil1uqAMRrk+FGHJQtYi9ktsyYFWgLxjDh542+UsQlPUCW3hKlvtPl2SiS9llSVLGjNA5J0cL/V1Lk4NsubxQcGZxc8S7ZFV3/AVBLAwQUAAAICAAACCHsLeW/eWwAAAB4AAAACQAkAG1ldGEuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAatWKkstKs7Mz1OyUjDRM9IzNNdRUEovSizIKAaKGII4pZkpIHa0UrKBkYWhQbKRmblxWmKSkaWuqUGigZmpQbIZkDSzNLJUigWqL6ksSPVLzE2F6AlILMlIy8xLycxL13MvykxxBxmtFFsLAFBLAQItABQAAAgIAAAIIewOGE1vfgIAADYFAAALACQAAAAAAAAAAAAAAAAAAABncmFwaDAuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAVBLAQItABQAAAgIAAAIIewt5b95bAAAAHgAAAAJACQAAAAAAAAAAAAAAMsCAABtZXRhLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFQSwUGAAAAAAIAAgC4AAAAggMAAAAA
+    dataString: UEsDBBQAAAgIAAAIIezwVtnefgIAADUFAAALACQAZ3JhcGgwLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFlVE1z2jAQ/SuMzoWRHbCht5YQ0kMSJqSTiy9CXmMNtuSR5ADJ8N+7km3sUC4sb7/evl3xRYQ0FXCr9FqL9EmlQH6OiLPJj1HvfIQT2yu5FZ/QxbyL1OYuiPmYV2aFQjxwaUaVYLXgv+S+cMEUwVqKTOlyle5hqYw1CGesMIAurazLlgh9jcgJv8YLl3JGK4yd9YnWgo4uaHKQFvQgdLaYRGF8Nw3DNoVOFvOQRtNwGrepwSSeRTQK4tlqTGNfppa8YGUFqZuprzYNJtR97uZtsWDuwyVO3Ua6CbkqCmFaysSeKy/JKzs7QVLBcHzP0cXmIPa5daMME1+yzIBttdHsfC80qthUJL9VI23JzKHh9sGK2vWIpp5OU/PpP/c48O5Mq/KxaxtQ18Lmgh+QIGfGDqQfwvffedfyyIoD2xXwnoN8Vmutapmi0+rapdYGwvv+53WyZQ780OMN1RuwrnrJu013e3YzXPzwp2Uhyp3f6LQBtoXyUvvzAI1L+YOE/fGYtgSijsVfA29sP7yy1vEgtLHoaqeUjt5O1dqFkgc0nPC8tkulJXi05VyBZIU9b7CKvV3gjW/Q9cbzwNxzanu3vu6V3KR4uI+n9Ma1Ucfrrkyujk9g8pfaFkJCT9o5nlGmpZKyua+hJF3attYZ44O0fS3S75dFOA3nAeVhFN9lbBcuxjPKaDSjHB/WLFqEC+JPT0ickxWbhmgrDy5N9sUlnln3LzNaa1b5W081O67FZ6kGkguZqS3XAPKlqXAlDhqb4HtMV6lAgbZgrZB+3eQrIYXiB0iTa6HET7o6Wc2SvkpCKvGhrEMSsvR/Kwlx8PWUNxo+BBxd867YhVz+AVBLAwQUAAAICAAACCHsLeW/eWwAAAB4AAAACQAkAG1ldGEuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAatWKkstKs7Mz1OyUjDRM9IzNNdRUEovSizIKAaKGII4pZkpIHa0UrKBkYWhQbKRmblxWmKSkaWuqUGigZmpQbIZkDSzNLJUigWqL6ksSPVLzE2F6AlILMlIy8xLycxL13MvykxxBxmtFFsLAFBLAQItABQAAAgIAAAIIezwVtnefgIAADUFAAALACQAAAAAAAAAAAAAAAAAAABncmFwaDAuanNvbgoAIAAAAAAAAQAYAACAPtXesZ0BAIA+1d6xnQEAgD7V3rGdAVBLAQItABQAAAgIAAAIIewt5b95bAAAAHgAAAAJACQAAAAAAAAAAAAAAMsCAABtZXRhLmpzb24KACAAAAAAAAEAGAAAgD7V3rGdAQCAPtXesZ0BAIA+1d6xnQFQSwUGAAAAAAIAAgC4AAAAggMAAAAA
     upgradeData: 
     file_cachedStartup: {fileID: 0}
     data_cachedStartup: 
@@ -2662,7 +2699,7 @@ GameObject:
   - component: {fileID: 1484244568}
   - component: {fileID: 1484244569}
   - component: {fileID: 1484244570}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: sword
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2884,7 +2921,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1526077065}
   - component: {fileID: 1526077066}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: GFX
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3090,6 +3127,10 @@ MonoBehaviour:
   enemySo: {fileID: 11400000, guid: 5e0cb0189cb39dd419a9e8a14e708d2e, type: 2}
   prefab: {fileID: 7488967544177158281, guid: f01f688190e7bfe40a96080a0a8f3461, type: 3}
   points: {fileID: 5993980178144965579, guid: e9c49661da59dac4d8f5fab4b8a39070, type: 3}
+  attackRange: 0
+  attackLayer:
+    serializedVersion: 2
+    m_Bits: 0
 --- !u!1 &1643025244
 GameObject:
   m_ObjectHideFlags: 0
@@ -3099,7 +3140,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1643025245}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RotatePoint
   m_TagString: Untagged
   m_Icon: {fileID: 0}
