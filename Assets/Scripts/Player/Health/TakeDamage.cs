@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class TakeDamage : MonoBehaviour
 {
-    [SerializeField] PlayerSO playerso;
-    float hp;
-    float maxHp;
+    [SerializeField] private PlayerSO playerso;
+    private float hp;
+    private float maxHp;
     void Start()
     {
         playerso = GetComponent<ChooseSOForTheWholeThing>().GetPlayerSO(0);

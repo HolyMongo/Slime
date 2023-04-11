@@ -6,10 +6,10 @@ using UnityEngine;
 
 public class EnemySO : ScriptableObject
 {
-    [SerializeField] string typeName;
-    [SerializeField] float maxHp;
-    [SerializeField] float speed;
-    [SerializeField] float damage;
+    [SerializeField] private string typeName;
+    [SerializeField] private float maxHp;
+    [SerializeField] private float speed;
+    [SerializeField] private float damage;
 
     public float MaxHp()
     {

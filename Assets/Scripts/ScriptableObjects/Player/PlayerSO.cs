@@ -5,12 +5,12 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "Player/player stats", fileName = "new player stats")]
 public class PlayerSO : ScriptableObject
 {
-    [SerializeField] float maxHp;
-    [SerializeField] float hp;
-    [SerializeField] float speed;
-    [SerializeField] float jumpPower;
-    [SerializeField] float damage;
-    [SerializeField] float attackspeed;
+    [SerializeField] private float maxHp;
+    [SerializeField] private float hp;
+    [SerializeField] private float speed;
+    [SerializeField] private float jumpPower;
+    [SerializeField] private float damage;
+    [SerializeField] private float attackspeed;
 
     public float MaxHp()
     {

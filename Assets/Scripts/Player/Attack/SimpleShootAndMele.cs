@@ -5,38 +5,38 @@ using Cinemachine;
 
 public class SimpleShootAndMele : MonoBehaviour
 {
-    PlayerSO playerSo;
+    private PlayerSO playerSo;
 
-    [SerializeField] GameObject bullet;
-    [SerializeField] [Range(1, 50)] float speed = 10f;
-    [SerializeField] GameObject rotatePoint;
-    [SerializeField] GameObject meleOrigin;
-    [SerializeField] Transform meleIdlePosition;
-    [SerializeField] Transform meleAttackPosition;
-    [SerializeField] GameObject sword;
+    [SerializeField] private GameObject bullet;
+    [SerializeField] [Range(1, 50)] private float speed = 10f;
+    [SerializeField] private GameObject rotatePoint;
+    [SerializeField] private GameObject meleOrigin;
+    [SerializeField] private Transform meleIdlePosition;
+    [SerializeField] private Transform meleAttackPosition;
+    [SerializeField] private GameObject sword;
 
-    float meleDamage = 5;
-    float RangeDamage = 5;
+    private float meleDamage = 5;
+    private float RangeDamage = 5;
 
-    float switchColdown; //So that you cant shoot and slash at the same time
-    float shootColdown;
-    float meleColdown;
+    private float switchColdown; //So that you cant shoot and slash at the same time
+    private float shootColdown;
+    private float meleColdown;
 
     private BoxCollider2D meleRange;
     [SerializeField] private LayerMask enemyMask;
 
-    [SerializeField] Camera playerCam;
-    Vector3 mousePosition;
-    Vector3 dir;
-    Vector3 rot;
+    [SerializeField] private Camera playerCam;
+    private Vector3 mousePosition;
+    private Vector3 dir;
+    private Vector3 rot;
 
-    GameObject enemy;
+    private GameObject enemy;
 
-    [SerializeField] List<string> itemList;
-    string currentItem;
-    int currentIndex = 0;
-    [SerializeField] KeyCode nextItem;
-    [SerializeField] KeyCode previusItem;
+    [SerializeField] private List<string> itemList;
+    private string currentItem;
+    private int currentIndex = 0;
+    [SerializeField] private KeyCode nextItem;
+    [SerializeField] private KeyCode previusItem;
 
     private void Start()
     {

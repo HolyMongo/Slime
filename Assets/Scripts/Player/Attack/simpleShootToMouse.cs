@@ -4,16 +4,16 @@ using UnityEngine;
 
 public class simpleShootToMouse : MonoBehaviour
 {
-    [SerializeField] PlayerSO playerso;
-    [SerializeField] GameObject bullet;
-    [SerializeField][Range(1,50)] float speed = 10f;
+    [SerializeField] private PlayerSO playerso;
+    [SerializeField] private GameObject bullet;
+    [SerializeField][Range(1,50)] private float speed = 10f;
 
-    Camera playerCam;
+    private Camera playerCam;
 
-    float coldown;
+    private float coldown;
 
-    Vector3 mousePosition;
-    Vector3 dir;
+    private Vector3 mousePosition;
+    private Vector3 dir;
     void Start()
     {
         playerso = GetComponent<ChooseSOForTheWholeThing>().GetPlayerSO(0);

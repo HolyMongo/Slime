@@ -5,12 +5,12 @@ using UnityEngine;
 public class ShootTowardsPlayer : MonoBehaviour
 {
     private ScriptableObject So;
-    [SerializeField] GameObject bullet;
-    CircleCollider2D detectionRange;
-    [SerializeField] Transform exitPoint;
+    [SerializeField] private GameObject bullet;
+    private CircleCollider2D detectionRange;
+    [SerializeField] private Transform exitPoint;
 
-    Transform player;
-    AudioSource aD;
+    private Transform player;
+    private AudioSource aD;
 
     void Start()
     {

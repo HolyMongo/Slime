@@ -5,19 +5,19 @@ using Pathfinding;
 
 public class EnemyAI : MonoBehaviour
 {
-    [SerializeField] Transform target;
-    [SerializeField] float speed = 400f;
-    [SerializeField] float nextWaypointDistance = 3f;
-    [SerializeField] Transform enemyGFX;
+    [SerializeField] private Transform target;
+    [SerializeField] private float speed = 400f;
+    [SerializeField] private float nextWaypointDistance = 3f;
+    [SerializeField] private Transform enemyGFX;
 
-    [SerializeField] CircleCollider2D detectionRange;
+    [SerializeField] private CircleCollider2D detectionRange;
 
-    Path path;
-    int currentWaypoint = 0;
-    bool reachedEndOfPath = false;
+    private Path path;
+    private int currentWaypoint = 0;
+    private bool reachedEndOfPath = false;
 
-    Seeker seeker;
-    Rigidbody2D rb;
+    private Seeker seeker;
+    private Rigidbody2D rb;
 
     private void Start()
     {

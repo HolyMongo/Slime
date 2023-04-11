@@ -4,22 +4,22 @@ using UnityEngine;
 
 public class BasicMovement : MonoBehaviour
 {
-    [SerializeField] PlayerSO playerso;
-    Rigidbody2D rb;
-    float speed;
+    [SerializeField] private PlayerSO playerso;
+    private Rigidbody2D rb;
+    private float speed;
 
-    BoxCollider2D bc;
-    float jumpPower;
-    [SerializeField] float extraHeight = 0.2f;
-    [SerializeField] LayerMask groundLayer;
+    private BoxCollider2D bc;
+    private float jumpPower;
+    [SerializeField] private float extraHeight = 0.2f;
+    [SerializeField] private LayerMask groundLayer;
 
-    float jumpBuffer;
-    float groundedBuffer;
+    private float jumpBuffer;
+    private float groundedBuffer;
 
     [SerializeField][Range(1, 10)]
-    float fallMultiplier = 2.5f;
+    private float fallMultiplier = 2.5f;
     [SerializeField][Range(1,10)]
-    float lowJumpMultiplier = 2f;
+    private float lowJumpMultiplier = 2f;
     //bool IsFalling;
 
     private AudioSource aD;
@@ -28,7 +28,7 @@ public class BasicMovement : MonoBehaviour
     //public AnimationClip jump;
     //public AnimationClip left;
     //public AnimationClip right;
-    float xDir;
+    private float xDir;
     void Start()
     {
         playerso = GetComponent<ChooseSOForTheWholeThing>().GetPlayerSO(0);

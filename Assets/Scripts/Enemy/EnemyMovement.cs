@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class EnemyMovement : MonoBehaviour
 {
-    [SerializeField] EnemySO enemySo;
-    GameObject player;
-    Rigidbody2D rb;
+    [SerializeField] private EnemySO enemySo;
+    private GameObject player;
+    private Rigidbody2D rb;
 
-    float dir;
+    private float dir;
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");

@@ -4,19 +4,19 @@ using UnityEngine;
 
 public class EnemyTakeAndDealDamage : MonoBehaviour
 {
-    [SerializeField] EnemySO enemySo;
-    float damage;
-    float hp;
-    float maxHp;
+    [SerializeField] private EnemySO enemySo;
+    private float damage;
+    private float hp;
+    private float maxHp;
     public GameObject prefab;
     public GameObject points;
 
     private Renderer material;
-    bool isDissolving = false;
-    float fade = 1f;
+    private bool isDissolving = false;
+    private float fade = 1f;
 
-    [SerializeField] float attackRange;
-    [SerializeField] LayerMask attackLayer;
+    [SerializeField] private float attackRange;
+    [SerializeField] private LayerMask attackLayer;
     void Start()
     {
         material = GetComponentInChildren<Renderer>();

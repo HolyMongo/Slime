@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class ChooseSOForTheWholeThing : MonoBehaviour
 {
-   [SerializeField] List<EnemySO> enemySO;
-   [SerializeField] List<PlayerSO> playerSO;
+   [SerializeField] private List<EnemySO> enemySO;
+   [SerializeField] private List<PlayerSO> playerSO;
     [Header("Ignore this one")]
-   [SerializeField] List<ScriptableObject> SO;
+   [SerializeField] private List<ScriptableObject> SO;
 
     public EnemySO GetEnemySO(int _index)
     {

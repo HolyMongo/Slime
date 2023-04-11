@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class PlayerBullet : MonoBehaviour
 {
-    [SerializeField] float lifeTime;
-    PlayerSO playerso;
+    [SerializeField] private float lifeTime;
+    private PlayerSO playerso;
 
 
     public void ChangeSO(PlayerSO sO)

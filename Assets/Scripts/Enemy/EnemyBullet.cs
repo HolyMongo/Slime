@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class EnemyBullet : MonoBehaviour
 {
-    [SerializeField] float lifeTime;
+    [SerializeField] private float lifeTime;
 
     void Update()
     {
