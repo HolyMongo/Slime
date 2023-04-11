@@ -11,10 +11,15 @@ public class EnemyTakeAndDealDamage : MonoBehaviour
     public GameObject prefab;
     public GameObject points;
 
+    private Renderer material;
+    bool isDissolving = false;
+    float fade = 1f;
+
     [SerializeField] float attackRange;
     [SerializeField] LayerMask attackLayer;
     void Start()
     {
+        material = GetComponentInChildren<Renderer>();
         enemySo = GetComponent<ChooseSOForTheWholeThing>().GetEnemySO(0);
         damage = enemySo.Damage();
         maxHp = enemySo.MaxHp();
@@ -39,9 +44,7 @@ public class EnemyTakeAndDealDamage : MonoBehaviour
         hp -= _dmg;
         if (hp <= 0)
         {
-            Destroy(gameObject);
-            Instantiate(prefab, transform.position, Quaternion.identity);
-            Instantiate(points, transform.position, Quaternion.identity);
+            isDissolving = true;                
         }
     }
 
@@ -54,6 +57,20 @@ public class EnemyTakeAndDealDamage : MonoBehaviour
     //}
     void Update()
     {
-        
+        if (isDissolving)
+        {
+            fade -= Time.deltaTime;
+            if (fade <= 0f)
+            {
+                fade = 0f;
+                isDissolving = false;
+                Instantiate(prefab, transform.position, Quaternion.identity);
+                Instantiate(points, transform.position, Quaternion.identity);
+                Destroy(gameObject);
+
+            }
+
+            material.material.SetFloat("_Fade", fade);
+        }
     }
 }
