@@ -1744,6 +1744,7 @@ GameObject:
   - component: {fileID: 724397311}
   - component: {fileID: 724397309}
   - component: {fileID: 724397320}
+  - component: {fileID: 724397321}
   m_Layer: 8
   m_Name: Player
   m_TagString: Player
@@ -2058,6 +2059,18 @@ MonoBehaviour:
   - Sword
   nextItem: 114
   previusItem: 113
+--- !u!114 &724397321
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 724397306}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e002e058a2fe03f4ba4169d8a60fddb9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &754769147 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8584432909860125689, guid: 6320f696e4536ce47872b08cd84d10ac, type: 3}

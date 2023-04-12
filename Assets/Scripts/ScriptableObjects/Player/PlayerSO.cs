@@ -11,6 +11,7 @@ public class PlayerSO : ScriptableObject
     [SerializeField] private float jumpPower;
     [SerializeField] private float damage;
     [SerializeField] private float attackspeed;
+    [SerializeField] private int lvl;
 
     public float MaxHp()
     {
@@ -35,6 +36,11 @@ public class PlayerSO : ScriptableObject
     public float JumpPower()
     {
         return jumpPower;
+    }
+
+    public int Lvl()
+    {
+        return lvl;
     }
     public void TakeDamage(float _Damage)
     {

@@ -6,8 +6,12 @@ public class PlayerBullet : MonoBehaviour
 {
     [SerializeField] private float lifeTime;
     private PlayerSO playerso;
+    private PlayerLvl playerLvlScript;
 
-
+    private void Start()
+    {
+        playerLvlScript = GetComponentInParent<PlayerLvl>();
+    }
     public void ChangeSO(PlayerSO sO)
     {
         playerso = sO;
@@ -31,7 +35,7 @@ public class PlayerBullet : MonoBehaviour
 
         if (collision.CompareTag("Enemy"))
         {
-            collision.GetComponentInParent<EnemyTakeAndDealDamage>().TakeDamage(playerso.Damage());
+            collision.GetComponentInParent<EnemyTakeAndDealDamage>().TakeDamage(playerso.Damage(), playerLvlScript);
             Destroy(gameObject);
         }
     }

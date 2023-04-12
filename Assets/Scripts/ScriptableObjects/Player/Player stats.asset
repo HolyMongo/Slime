@@ -18,3 +18,4 @@ MonoBehaviour:
   jumpPower: 8
   damage: 2
   attackspeed: 1
+  lvl: 1

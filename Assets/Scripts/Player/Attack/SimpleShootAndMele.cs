@@ -38,6 +38,8 @@ public class SimpleShootAndMele : MonoBehaviour
     [SerializeField] private KeyCode nextItem;
     [SerializeField] private KeyCode previusItem;
 
+    private PlayerLvl playerLvlScript;
+
     private void Start()
     {
         currentItem = itemList[0];
@@ -45,6 +47,7 @@ public class SimpleShootAndMele : MonoBehaviour
         meleRange = sword.GetComponent<BoxCollider2D>();
         meleOrigin.SetActive(false);
         sword.SetActive(false);
+        playerLvlScript = GetComponent<PlayerLvl>();
     }
 
     private void Update()
@@ -151,6 +154,7 @@ public class SimpleShootAndMele : MonoBehaviour
         GameObject bulletClone = GameObject.Instantiate(bullet, transform.position + new Vector3(0, 0.1f, 0), Quaternion.identity);
         bulletClone.GetComponent<Rigidbody2D>().velocity = new Vector2(dir.x, dir.y).normalized * speed;
         bulletClone.GetComponent<PlayerBullet>().ChangeSO(playerSo);
+        bulletClone.transform.SetParent(gameObject.transform);
     }
     private void AttackMele()
     {
@@ -162,7 +166,7 @@ public class SimpleShootAndMele : MonoBehaviour
             if (enemy != null)
             {
                 Debug.Log(enemy);
-                enemy.GetComponentInParent<EnemyTakeAndDealDamage>().TakeDamage(meleDamage);
+                enemy.GetComponentInParent<EnemyTakeAndDealDamage>().TakeDamage(meleDamage, playerLvlScript);
                 Debug.Log("Hit Enemy");
             }
         }

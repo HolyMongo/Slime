@@ -8,6 +8,7 @@ public class EnemyTakeAndDealDamage : MonoBehaviour
     private float damage;
     private float hp;
     private float maxHp;
+    private int exp;
     public GameObject prefab;
     public GameObject points;
 
@@ -24,6 +25,7 @@ public class EnemyTakeAndDealDamage : MonoBehaviour
         damage = enemySo.Damage();
         maxHp = enemySo.MaxHp();
         hp = maxHp;
+        exp = enemySo.Exp();
         InvokeRepeating("CheckAndAttack", 0f, 1f);
     }
 
@@ -35,16 +37,17 @@ public class EnemyTakeAndDealDamage : MonoBehaviour
             GameObject player = hit.transform.gameObject;
             Vector2 attackDirection = gameObject.transform.position - player.transform.position;
 
-            player.GetComponent<TakeDamage>().GetHit(damage);
+            player.GetComponent<TakeDamage>().GetHit(damage, gameObject.transform.position, 4);
             Debug.Log("Hit player!");
         }
     }
-    public void TakeDamage(float _dmg)
+    public void TakeDamage(float _dmg, PlayerLvl _playerlvl)
     {
         hp -= _dmg;
         if (hp <= 0)
         {
             isDissolving = true;                
+            _playerlvl.AddExp(exp);
         }
     }
 
