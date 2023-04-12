@@ -16,6 +16,9 @@ public class BasicMovement : MonoBehaviour
     private float jumpBuffer;
     private float groundedBuffer;
 
+    private bool canDubbleJump = false;
+    private bool dubbleJumpReady = false;
+
     [SerializeField][Range(1, 10)]
     private float fallMultiplier = 2.5f;
     [SerializeField][Range(1,10)]
@@ -29,6 +32,19 @@ public class BasicMovement : MonoBehaviour
     //public AnimationClip left;
     //public AnimationClip right;
     private float xDir;
+
+    public void SetDubbleJumpTrue()
+    {
+        canDubbleJump = true;
+    }
+    public void SetSpeedBoostTrue(float _speedBoost)
+    {
+        speed *= _speedBoost;
+    }
+    public void SetSpeedBoostFalse(float _speedBoost)
+    {
+        speed /= _speedBoost;
+    }
     void Start()
     {
         playerso = GetComponent<ChooseSOForTheWholeThing>().GetPlayerSO(0);
@@ -60,9 +76,14 @@ public class BasicMovement : MonoBehaviour
         if (Input.GetButtonDown("Jump") && groundedBuffer > 0 || jumpBuffer > 0 && groundedBuffer > 0)
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpPower);
-         
             aD.Play();
            
+        }
+        if (dubbleJumpReady && Input.GetButtonDown("Jump"))
+        {
+            dubbleJumpReady = false;
+            rb.velocity = new Vector2(rb.velocity.x, jumpPower);
+            aD.Play();
         }
        
 
@@ -134,6 +155,10 @@ public class BasicMovement : MonoBehaviour
         {
             rayColor = Color.green;
             anim.SetBool("IsJumping", false);
+            if (canDubbleJump)
+            {
+                dubbleJumpReady = true;
+            }
         }
         else
         {
