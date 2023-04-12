@@ -9,6 +9,7 @@ TagManager:
   - Wood
   - PickUp
   - Nodes
+  - Death
   layers:
   - Default
   - TransparentFX
@@ -19,7 +20,7 @@ TagManager:
   - Ground
   - Enemy
   - Player
-  - 
+  - Death
   - 
   - 
   - 

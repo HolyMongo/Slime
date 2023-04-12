@@ -3193,6 +3193,7 @@ MonoBehaviour:
   enemySO: []
   playerSO:
   - {fileID: 11400000, guid: 05c941780a83d7940b50616c916652f2, type: 2}
+  SO: []
 --- !u!114 &1998429035
 MonoBehaviour:
   m_ObjectHideFlags: 0
