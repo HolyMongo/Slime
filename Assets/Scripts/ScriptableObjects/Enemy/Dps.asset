@@ -15,5 +15,5 @@ MonoBehaviour:
   typeName: 
   maxHp: 2
   speed: 2
-  damage: 100
+  damage: 5
   exp: 50

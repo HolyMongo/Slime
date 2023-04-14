@@ -12,6 +12,8 @@ public class TakeDamage : MonoBehaviour
     private BasicMovement bm;
 
     private bool invulnerable = false;
+
+    private HealthBar healthBar;
     void Start()
     {
         playerso = GetComponent<ChooseSOForTheWholeThing>().GetPlayerSO(0);
@@ -19,6 +21,10 @@ public class TakeDamage : MonoBehaviour
         maxHp = playerso.MaxHp();
         bm = GetComponent<BasicMovement>();
         rb = GetComponent<Rigidbody2D>();
+        if (GetComponent<HealthBar>())
+        {
+            healthBar = GetComponent<HealthBar>();
+        }
     }
 
     public void GetHit(float _Dmg, Vector2 _knockbakDirection, float _force)
@@ -31,6 +37,10 @@ public class TakeDamage : MonoBehaviour
             rb.velocity = ((Vector2)gameObject.transform.position - _knockbakDirection).normalized * _force;
             StartCoroutine(InvulnerabilityFrames());
             StartCoroutine(ToggleMovement());
+            if (GetComponent<HealthBar>())
+            {
+                healthBar.TakeDamage(_Dmg);
+            }
             //Add red color to player to make it more clear they took damage
         }
     }
