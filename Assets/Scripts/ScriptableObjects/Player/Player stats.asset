@@ -17,5 +17,6 @@ MonoBehaviour:
   speed: 5
   jumpPower: 8
   damage: 2
-  attackspeed: 1
+  attackspeed: 0.5
   lvl: 1
+  canDubbleJump: 0

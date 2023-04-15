@@ -40,6 +40,11 @@ public class SimpleShootAndMele : MonoBehaviour
 
     private PlayerLvl playerLvlScript;
 
+    public float GetShootColdown()
+    {
+        return shootColdown;
+    }
+
     private void Start()
     {
         currentItem = itemList[0];
