@@ -36,6 +36,7 @@ public class BasicMovement : MonoBehaviour
     public void SetDubbleJumpTrue()
     {
         canDubbleJump = true;
+        playerso.ChangeCanDubbleJump(true);
     }
     public void SetSpeedBoostTrue(float _speedBoost)
     {
@@ -55,6 +56,10 @@ public class BasicMovement : MonoBehaviour
         speed = playerso.Speed();
         jumpPower = playerso.JumpPower();
         anim = GetComponent<Animator>();
+        if (playerso.CanDubbleJump())
+        {
+            canDubbleJump = true;
+        }
     }
 
     private void Update()
