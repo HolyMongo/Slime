@@ -18,8 +18,22 @@ public class PauseMenu : MonoBehaviour
 
     public void Continue()
     {
-        isActive.SetActive(!false);
-        Time.timeScale = 0;
+       if(isActive.activeInHierarchy == true)
+        {
+            isActive.SetActive(false);
+        }
+       else
+        {
+            isActive.SetActive(true);
+        }
+        if(Time.timeScale <= 0)
+        {
+            Time.timeScale = 1;
+        }
+        else if(Time.timeScale > 0)
+        {
+            Time.timeScale = 0;
+        }
 
     }
     public void SaveGame()
