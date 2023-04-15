@@ -10,6 +10,7 @@ public class CeilingEnemy : MonoBehaviour
 
     private float damage;
     private float health;
+    private float attackspeed;
 
     private float bulletSpeed = 5f;
     private float decendingSpeed = 15f;
@@ -36,34 +37,52 @@ public class CeilingEnemy : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
+
         if (collision.CompareTag("Player"))
         {
             inRange = true;
-            player = collision.gameObject;
-            if (IsMele)
-            {
-                //Dont use mele...for now
-                /*
-                //GFXAndAttack.GetComponent<Rigidbody2D>().MovePosition(player.transform.position);
-                InvokeRepeating("MoveUpAndDown", 0f, 5f);
-                GFXAndAttack.transform.position = Vector2.MoveTowards(GFXAndAttack.transform.position, endPosition.position, Vector2.Distance(startPosition.position, endPosition.position)).normalized * decendingSpeed;
-                */
-            }
-            else if (!IsMele)
-            {
-                GameObject bulletClone = GameObject.Instantiate(bullet, transform.position, Quaternion.identity);
-                bulletClone.GetComponent<EnemyBullet>().ChangeEnemySo(enemySo);
-                bulletClone.SetActive(true);
-                bulletClone.GetComponent<Rigidbody2D>().velocity = bulletExitAndDirection.transform.forward.normalized * bulletSpeed;
+            //player = collision.gameObject;
+            //if (IsMele)
+            //{
+            //    //Dont use mele...for now
+            //    /*
+            //    //GFXAndAttack.GetComponent<Rigidbody2D>().MovePosition(player.transform.position);
+            //    InvokeRepeating("MoveUpAndDown", 0f, 5f);
+            //    GFXAndAttack.transform.position = Vector2.MoveTowards(GFXAndAttack.transform.position, endPosition.position, Vector2.Distance(startPosition.position, endPosition.position)).normalized * decendingSpeed;
+            //    */
+            //}
+            //else if (!IsMele)
+            //{
+            //    GameObject bulletClone = GameObject.Instantiate(bullet, transform.position, Quaternion.identity);
+            //    bulletClone.GetComponent<EnemyBullet>().ChangeEnemySo(enemySo);
+            //    bulletClone.SetActive(true);
+            //    bulletClone.GetComponent<Rigidbody2D>().velocity = bulletExitAndDirection.transform.forward.normalized * bulletSpeed;
 
-            }
+            //}
         }
     }
+
+  
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
         {
             inRange = false;
         }
+    }
+
+    private void Update()
+    {
+        attackspeed -= Time.deltaTime;
+
+        if (attackspeed <= 0 && inRange)
+        {
+            attackspeed = enemySo.Speed();
+            GameObject bulletClone = GameObject.Instantiate(bullet, transform.position, Quaternion.identity);
+            bulletClone.GetComponent<EnemyBullet>().ChangeEnemySo(enemySo);
+            bulletClone.SetActive(true);
+            bulletClone.GetComponent<Rigidbody2D>().velocity = bulletExitAndDirection.transform.forward.normalized * bulletSpeed;
+        }
+
     }
 }

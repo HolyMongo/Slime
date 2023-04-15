@@ -12,6 +12,7 @@ public class PlayerSO : ScriptableObject
     [SerializeField] private float damage;
     [SerializeField] private float attackspeed;
     [SerializeField] private int lvl;
+    [SerializeField] private int currentExp;
     [SerializeField] private bool canDubbleJump;
 
     public float MaxHp()
@@ -44,6 +45,11 @@ public class PlayerSO : ScriptableObject
         return lvl;
     }
 
+    public int CurrentExp()
+    {
+        return currentExp;
+    }
+
     public bool CanDubbleJump()
     {
         return canDubbleJump;
@@ -56,5 +62,15 @@ public class PlayerSO : ScriptableObject
     public void TakeDamage(float _Damage)
     {
         hp -= _Damage;
+    }
+
+    public void SetCurrentLvl(int _lvl)
+    {
+        lvl = _lvl;
+    }
+
+    public void SetCurrentExp(int _Exp)
+    {
+        currentExp = _Exp;
     }
 }

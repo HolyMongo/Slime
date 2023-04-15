@@ -163,7 +163,7 @@ public class SimpleShootAndMele : MonoBehaviour
     }
     private void AttackMele()
     {
-        meleColdown = 1;
+        meleColdown = 0.3f;
         RaycastHit2D hit = Physics2D.BoxCast(new Vector2(sword.transform.position.x, sword.transform.position.y), new Vector2(meleRange.bounds.extents.x, meleRange.bounds.extents.y), 0, Vector2.down, 1, enemyMask);
         if (hit != false)
         {

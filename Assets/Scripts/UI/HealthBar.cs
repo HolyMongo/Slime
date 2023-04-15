@@ -7,28 +7,57 @@ using TMPro;
 public class HealthBar : MonoBehaviour
 {
     private PlayerSO playerSo;
+    private PlayerLvl playerLvl;
     [SerializeField] private Slider slider;
 
-    [SerializeField] TextMeshProUGUI hpText;
+    [SerializeField] TextMeshProUGUI barText;
+    [SerializeField] TextMeshProUGUI textAboveTheBar;
 
+    [SerializeField] private TypeOfBar typeOfBar;
+
+    enum TypeOfBar
+    {
+        Health,
+        Lvl
+    }
 
     void Start()
     {
         playerSo = GetComponent<ChooseSOForTheWholeThing>().GetPlayerSO(0);
-        slider.maxValue = playerSo.MaxHp();
-        slider.value = playerSo.Hp();
-        hpText.text = slider.value + "/" + slider.maxValue;
+        if (typeOfBar == TypeOfBar.Health)
+        {
+            slider.maxValue = playerSo.MaxHp();
+            slider.value = playerSo.Hp();
+        }
+        barText.text = slider.value + "/" + slider.maxValue;
     }
 
     public void TakeDamage(float _damage)
     {
         slider.value -= _damage;
-        hpText.text = slider.value + "/" + slider.maxValue;
+        barText.text = slider.value + "/" + slider.maxValue;
     }
 
-    public void SetMaxHealth(float _maxHealth)
+    public void AddXpOrHealth(int _value)
     {
-        slider.maxValue = _maxHealth;
-        hpText.text = slider.value + "/" + slider.maxValue;
+        slider.value += _value;
+        barText.text = slider.value + "/" + slider.maxValue;
+    }
+
+    public void SetValue(int _value)
+    {
+        slider.value = _value;
+        barText.text = slider.value + "/" + slider.maxValue;
+    }
+
+    public void SetMaxValue(float _maxValue)
+    {
+        slider.maxValue = _maxValue;
+        barText.text = slider.value + "/" + slider.maxValue;
+    }
+
+    public void AdjustTextAboveBar(string _newText)
+    {
+        textAboveTheBar.text = _newText;
     }
 }
