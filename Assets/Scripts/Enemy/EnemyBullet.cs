@@ -5,7 +5,12 @@ using UnityEngine;
 public class EnemyBullet : MonoBehaviour
 {
     [SerializeField] private float lifeTime;
+    private EnemySO enemySo;
 
+    public void ChangeEnemySo(EnemySO _enemySo)
+    {
+        enemySo = _enemySo;
+    }
     void Update()
     {
         lifeTime -= Time.deltaTime;
@@ -24,7 +29,7 @@ public class EnemyBullet : MonoBehaviour
 
         if (collision.CompareTag("Player"))
         {
-            collision.GetComponent<TakeDamage>().GetHit(5, gameObject.transform.position, 2);
+            collision.GetComponent<TakeDamage>().GetHit(enemySo.Damage(), gameObject.transform.position, 2);
             Destroy(gameObject);
         }
     }
