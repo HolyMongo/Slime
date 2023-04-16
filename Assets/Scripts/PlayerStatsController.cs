@@ -7,7 +7,7 @@ public class PlayerStatsController : MonoBehaviour, IDataPersistence
 {
     // Player Death count
     public TMP_Text DeathText;
-    public  int deathCount = 0;
+    private int deathCount = 0;
 
     // Player item count
     public TMP_Text ItemText;
@@ -28,6 +28,8 @@ public class PlayerStatsController : MonoBehaviour, IDataPersistence
         {
             Continue();
         }
+         DeathText.text = "Deaths " + deathCount;
+      
     }
     public void Continue()
     {
@@ -43,14 +45,18 @@ public class PlayerStatsController : MonoBehaviour, IDataPersistence
     public void UpdateHealthText()
     {
         deathCount++;
+       
         DeathText.text = "Deaths " + deathCount;
-      
+        DataPersistenceManager.Instance.SaveGame();
     }
+    
 
     public void UpdateItemText()
     {
       ItemCount++;
+
         ItemText.text = "Collected Items " + ItemCount;
+        DataPersistenceManager.Instance.SaveGame();
     }
 
     public void LoadData(GameData data)
@@ -68,7 +74,8 @@ public class PlayerStatsController : MonoBehaviour, IDataPersistence
     {
 
         data.DeathCount = this.deathCount;
-        deathCount++;
-        DeathText.text = "Deaths " + deathCount;
+      
+        //deathCount++;
+        //DeathText.text = "Deaths " + deathCount;
     }
 }

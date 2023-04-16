@@ -15,6 +15,7 @@ public class TakeDamage : MonoBehaviour
     private bool invulnerable = false;
 
     [SerializeField] private HealthBar healthBar;
+    private PlayerStatsController playerStats;
     void Start()
     {
         playerso = GetComponent<ChooseSOForTheWholeThing>().GetPlayerSO(0);
@@ -28,6 +29,7 @@ public class TakeDamage : MonoBehaviour
             healthBar.SetMaxValue(maxHp);
             healthBar.SetValue(hp);
         }
+       playerStats = GameObject.Find("PlayerStats(Canvas)").GetComponent<PlayerStatsController>();
     }
 
     public void Heal(float _hp)
@@ -60,9 +62,9 @@ public class TakeDamage : MonoBehaviour
             //When health reaches 0
             if(hp <= 0)
             {
+                Debug.Log("HealthBar is zero");
+                playerStats.UpdateHealthText();
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);                        
-               // PlayerStatsController.Instance.UpdateHealthText();
-
             }
         }
     }
