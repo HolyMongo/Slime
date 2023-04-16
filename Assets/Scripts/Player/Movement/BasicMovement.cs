@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BasicMovement : MonoBehaviour
+public class BasicMovement : MonoBehaviour, IDataPersistence
 {
     [SerializeField] private PlayerSO playerso;
     private Rigidbody2D rb;
@@ -187,5 +187,14 @@ public class BasicMovement : MonoBehaviour
         //IsFalling = false;
         //gravity = -9.81f;
         return rayHit2D.collider != null;
+    }
+
+    public void LoadData(GameData data)
+    {
+        this.transform.position = data.PlayerPosition;
+    }
+    public void SaveData(ref GameData data)
+    {
+        data.PlayerPosition = this.transform.position;
     }
 }

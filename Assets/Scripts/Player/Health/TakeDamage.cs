@@ -1,13 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class TakeDamage : MonoBehaviour
 {
     [SerializeField] private PlayerSO playerso;
     private float hp;
     private float maxHp;
-
+  //  public static int deathCount = 0;
     private Rigidbody2D rb;
     private BasicMovement bm;
 
@@ -55,6 +56,14 @@ public class TakeDamage : MonoBehaviour
                 healthBar.TakeDamage(_Dmg);
             }
             //Add red color to player to make it more clear they took damage
+
+            //When health reaches 0
+            if(hp <= 0)
+            {
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);                        
+                PlayerStatsController.Instance.UpdateHealthText();
+
+            }
         }
     }
 
@@ -68,4 +77,6 @@ public class TakeDamage : MonoBehaviour
         yield return new WaitForSeconds(0.5f);
         bm.enabled = true;
     }
+
+    
 }

@@ -38,15 +38,17 @@ public class PauseMenu : MonoBehaviour
     }
     public void SaveGame()
     {
-        
+        DataPersistenceManager.Instance.SaveGame();
     }
     public void LoadGame()
     {
-
+        DataPersistenceManager.Instance.LoadGame();
     }
     
     public void Quit()
     {
-        SceneManager.LoadScene(menu);
+        DataPersistenceManager.Instance.SaveGame();
+
+        SceneManager.LoadSceneAsync(menu);
     }
 }
