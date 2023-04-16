@@ -61,7 +61,7 @@ public class TakeDamage : MonoBehaviour
             if(hp <= 0)
             {
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);                        
-                PlayerStatsController.Instance.UpdateHealthText();
+               // PlayerStatsController.Instance.UpdateHealthText();
 
             }
         }

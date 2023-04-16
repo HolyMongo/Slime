@@ -68,7 +68,7 @@ public class PlayerStatsController : MonoBehaviour, IDataPersistence
     {
 
         data.DeathCount = this.deathCount;
-        //deathCount++;
-        //DeathText.text = "Deaths " + deathCount;
+        deathCount++;
+        DeathText.text = "Deaths " + deathCount;
     }
 }
