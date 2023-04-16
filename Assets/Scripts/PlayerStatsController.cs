@@ -44,6 +44,7 @@ public class PlayerStatsController : MonoBehaviour, IDataPersistence
     {
         deathCount++;
         DeathText.text = "Deaths " + deathCount;
+      
     }
 
     public void UpdateItemText()
@@ -65,6 +66,9 @@ public class PlayerStatsController : MonoBehaviour, IDataPersistence
     }
     public void SaveData(ref GameData data)
     {
+
         data.DeathCount = this.deathCount;
+        //deathCount++;
+        //DeathText.text = "Deaths " + deathCount;
     }
 }
