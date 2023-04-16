@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerLvl : MonoBehaviour
+public class PlayerLvl : MonoBehaviour, IDataPersistence
 {
     private PlayerSO playerSo;
     [SerializeField] HealthBar lvlHealthbar;
@@ -45,6 +45,7 @@ public class PlayerLvl : MonoBehaviour
         lvlHealthbar.SetValue(currentExp);
         lvlHealthbar.SetMaxValue(expToLvlUp);
         lvlHealthbar.AdjustTextAboveBar("LVL:v " + currentLvl);
+        DataPersistenceManager.Instance.SaveGame();
     }
 
     public int GetCurrentExp()
@@ -61,5 +62,14 @@ public class PlayerLvl : MonoBehaviour
         return currentLvl;
     }
 
-
+    public void LoadData(GameData data) 
+    {
+        this.currentLvl = data.currentLvl;
+        this.currentExp = data.currentExp;
+    }
+    public void SaveData(ref GameData data)
+    {
+        data.currentLvl = this.currentLvl;
+        data.currentExp = this.currentExp;
+    }
 }

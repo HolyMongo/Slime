@@ -18,6 +18,6 @@ MonoBehaviour:
   jumpPower: 8
   damage: 2
   attackspeed: 1
-  lvl: 15
-  currentExp: 429
-  canDubbleJump: 1
+  lvl: 0
+  currentExp: 0
+  canDubbleJump: 0
