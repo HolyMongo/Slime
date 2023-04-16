@@ -14,7 +14,7 @@ public class TakeDamage : MonoBehaviour
 
     private bool invulnerable = false;
 
-    private HealthBar healthBar;
+    [SerializeField] private HealthBar healthBar;
     void Start()
     {
         playerso = GetComponent<ChooseSOForTheWholeThing>().GetPlayerSO(0);
