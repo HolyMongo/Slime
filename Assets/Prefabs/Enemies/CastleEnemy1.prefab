@@ -115,7 +115,7 @@ MonoBehaviour:
   enemySo: {fileID: 0}
   prefab: {fileID: 6512637616774341514, guid: 50196cd267c81cb45b9d6bd6fe0515b5, type: 3}
   points: {fileID: 5993980178144965579, guid: e9c49661da59dac4d8f5fab4b8a39070, type: 3}
-  attackRange: 0.8
+  attackRange: 1.2
   attackLayer:
     serializedVersion: 2
     m_Bits: 256
