@@ -15,6 +15,8 @@ public class GameData // Vad som ska sparas
 
     public SerializableDictionary<string, bool> itemCollected;
 
+    public bool IntroTimeLineHasPlayed;
+
     // The values defined in this constructor will be the default values
     // The game starts with when there no data to lead. So the first time you start the game
 
@@ -22,8 +24,9 @@ public class GameData // Vad som ska sparas
     {
         currentSceneName = "Intro";
         this.DeathCount = 0;
-        this.PlayerPosition = new Vector3(-329.46f, -60.036f, 0f);
-        itemCollected = new SerializableDictionary<string, bool>();   
+        this.PlayerPosition = new Vector3(-16f, -0.5f, 0f);
+        itemCollected = new SerializableDictionary<string, bool>();
+        IntroTimeLineHasPlayed = false;
     }
 
     public int GetPercentageComplete() // Den här metoden används för att räkna ut hur många % av spelet som är avklarad, dess UI är just nu avstängd
