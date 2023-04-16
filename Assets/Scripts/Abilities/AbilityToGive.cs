@@ -10,6 +10,8 @@ public class AbilityToGive : WhatAbility
     [SerializeField] List<Collider2D> collidedObjects = new List<Collider2D>(1);
     BoxCollider2D collider2d;
     [SerializeField] LayerMask layermask;
+    private TakeDamage takeDamage;
+    [SerializeField] private float healingAmount;
 
     private GameObject player;
     private bool isColliding;
@@ -55,6 +57,11 @@ public class AbilityToGive : WhatAbility
     {
         if (Input.GetKeyDown(KeyCode.E))
         {
+            if (_collidedObject.GetComponent<TakeDamage>())
+            {
+               takeDamage = _collidedObject.GetComponent<TakeDamage>();
+               takeDamage.Heal(healingAmount);
+            }
             if (abilityToGive == ability.dubbleJump)
             {
                 if (_collidedObject.GetComponent<BasicMovement>())

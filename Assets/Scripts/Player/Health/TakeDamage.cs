@@ -24,7 +24,20 @@ public class TakeDamage : MonoBehaviour
         if (GetComponent<HealthBar>())
         {
             healthBar = GetComponent<HealthBar>();
+            healthBar.SetMaxValue(maxHp);
+            healthBar.SetValue(hp);
         }
+    }
+
+    public void Heal(float _hp)
+    {
+        hp += _hp;
+        if (hp > maxHp)
+        {
+            hp = maxHp;
+        }
+        healthBar.SetMaxValue(maxHp);
+        healthBar.SetValue(hp);
     }
 
     public void GetHit(float _Dmg, Vector2 _knockbakDirection, float _force)

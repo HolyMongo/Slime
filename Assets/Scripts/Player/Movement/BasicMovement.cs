@@ -33,6 +33,8 @@ public class BasicMovement : MonoBehaviour
     //public AnimationClip right;
     private float xDir;
 
+    private bool isDeath = false;
+
     public void SetDubbleJumpTrue()
     {
         canDubbleJump = true;
@@ -159,6 +161,13 @@ public class BasicMovement : MonoBehaviour
         Color rayColor;
         if (rayHit2D.collider != null)
         {
+            if (rayHit2D.transform.gameObject.layer == LayerMask.NameToLayer("Death"))
+            {
+                if (gameObject.GetComponent<TakeDamage>())
+                {
+                    GetComponent<TakeDamage>().GetHit(5, transform.position, 0);
+                }
+            }
             rayColor = Color.green;
             anim.SetBool("IsJumping", false);
             if (canDubbleJump)

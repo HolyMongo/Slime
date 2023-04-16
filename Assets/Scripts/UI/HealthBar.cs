@@ -44,7 +44,7 @@ public class HealthBar : MonoBehaviour
         barText.text = slider.value + "/" + slider.maxValue;
     }
 
-    public void SetValue(int _value)
+    public void SetValue(float _value)
     {
         slider.value = _value;
         barText.text = slider.value + "/" + slider.maxValue;

@@ -15,6 +15,7 @@ public class EnemyTakeAndDealDamage : MonoBehaviour
     private Renderer material;
     private bool isDissolving = false;
     private float fade = 1f;
+    private EnemyHealthBar enemyHealthBar;
 
     [SerializeField] private float attackRange;
     [SerializeField] private LayerMask attackLayer;
@@ -27,6 +28,10 @@ public class EnemyTakeAndDealDamage : MonoBehaviour
         hp = maxHp;
         exp = enemySo.Exp();
         InvokeRepeating("CheckAndAttack", 0f, 1f);
+        if (GetComponent<EnemyHealthBar>())
+        {
+            enemyHealthBar = GetComponent<EnemyHealthBar>();
+        }
     }
 
     private void CheckAndAttack()
@@ -44,6 +49,7 @@ public class EnemyTakeAndDealDamage : MonoBehaviour
     public void TakeDamage(float _dmg, PlayerLvl _playerlvl)
     {
         hp -= _dmg;
+        enemyHealthBar.TakeDamage(_dmg);
         if (hp <= 0)
         {
             isDissolving = true;                

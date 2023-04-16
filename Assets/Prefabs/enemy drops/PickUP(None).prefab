@@ -361,6 +361,7 @@ MonoBehaviour:
   layermask:
     serializedVersion: 2
     m_Bits: 256
+  healingAmount: 10
 --- !u!61 &-3374395063082977162
 BoxCollider2D:
   m_ObjectHideFlags: 0

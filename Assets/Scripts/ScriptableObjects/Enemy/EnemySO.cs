@@ -11,7 +11,10 @@ public class EnemySO : ScriptableObject
     [SerializeField] private float speed;
     [SerializeField] private float damage;
     [SerializeField] private int exp;
-
+    public string TypeName()
+    {
+        return typeName;
+    }
     public float MaxHp()
     {
         return maxHp;
