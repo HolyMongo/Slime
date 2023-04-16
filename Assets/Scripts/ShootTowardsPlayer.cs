@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ShootTowardsPlayer : MonoBehaviour
 {
-    private ScriptableObject So;
+    private EnemySO enemySo;
     [SerializeField] private GameObject bullet;
     private CircleCollider2D detectionRange;
     [SerializeField] private Transform exitPoint;
@@ -14,7 +14,7 @@ public class ShootTowardsPlayer : MonoBehaviour
 
     void Start()
     {
-        So = GetComponent<ChooseSOForTheWholeThing>().GetEnemySO(0);
+        enemySo = GetComponent<ChooseSOForTheWholeThing>().GetEnemySO(0);
         detectionRange = GetComponent<CircleCollider2D>();
         aD = GetComponent<AudioSource>();
     }
@@ -44,6 +44,7 @@ public class ShootTowardsPlayer : MonoBehaviour
         Vector2 dir = player.position - exitPoint.position;
         GameObject bulletClone = Object.Instantiate(bullet, exitPoint.position + new Vector3(0, 0.1f, 0), Quaternion.identity);
         bulletClone.SetActive(true);
+        bulletClone.GetComponent<EnemyBullet>().ChangeEnemySo(enemySo);
         bulletClone.GetComponent<Rigidbody2D>().velocity = new Vector2(dir.x, dir.y).normalized * 5;
         aD.Play();
     }
