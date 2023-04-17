@@ -53,11 +53,31 @@ SpriteAtlas:
     - {fileID: 2800000, guid: 9d50c7b32af202043bd1a7c46b05fff5, type: 3}
     - {fileID: 2800000, guid: 5b50e50790511cf4586eeb9d66517fe8, type: 3}
     - {fileID: 2800000, guid: b6bdd71138cea1742a292e48d73c4ec5, type: 3}
+    - {fileID: 2800000, guid: 4ba26970a666a4e4596367a20d03108f, type: 3}
     bindAsDefault: 1
     isAtlasV2: 0
     cachedData: {fileID: 0}
   m_MasterAtlas: {fileID: 0}
   m_PackedSprites:
+  - {fileID: 957551878, guid: 4ba26970a666a4e4596367a20d03108f, type: 3}
+  - {fileID: 298034970, guid: 4ba26970a666a4e4596367a20d03108f, type: 3}
+  - {fileID: 1627427735, guid: 4ba26970a666a4e4596367a20d03108f, type: 3}
+  - {fileID: 1325514474, guid: 4ba26970a666a4e4596367a20d03108f, type: 3}
+  - {fileID: 1301500705, guid: 4ba26970a666a4e4596367a20d03108f, type: 3}
+  - {fileID: -1023032669, guid: 4ba26970a666a4e4596367a20d03108f, type: 3}
+  - {fileID: -240022553, guid: 4ba26970a666a4e4596367a20d03108f, type: 3}
+  - {fileID: 1834460991, guid: 4ba26970a666a4e4596367a20d03108f, type: 3}
+  - {fileID: 1982914947, guid: 4ba26970a666a4e4596367a20d03108f, type: 3}
+  - {fileID: 1436264019, guid: 4ba26970a666a4e4596367a20d03108f, type: 3}
+  - {fileID: -573899019, guid: 4ba26970a666a4e4596367a20d03108f, type: 3}
+  - {fileID: 1686438715, guid: 4ba26970a666a4e4596367a20d03108f, type: 3}
+  - {fileID: 752616501, guid: 4ba26970a666a4e4596367a20d03108f, type: 3}
+  - {fileID: 1760034564, guid: 4ba26970a666a4e4596367a20d03108f, type: 3}
+  - {fileID: 1163947014, guid: 4ba26970a666a4e4596367a20d03108f, type: 3}
+  - {fileID: -241198286, guid: 4ba26970a666a4e4596367a20d03108f, type: 3}
+  - {fileID: -735564893, guid: 4ba26970a666a4e4596367a20d03108f, type: 3}
+  - {fileID: -1195522203, guid: 4ba26970a666a4e4596367a20d03108f, type: 3}
+  - {fileID: 1909908601, guid: 4ba26970a666a4e4596367a20d03108f, type: 3}
   - {fileID: 21300000, guid: 56051011ea1b2de4a99a2ad6d6b8ef7c, type: 3}
   - {fileID: 1792711702, guid: b6bdd71138cea1742a292e48d73c4ec5, type: 3}
   - {fileID: -323896975, guid: b6bdd71138cea1742a292e48d73c4ec5, type: 3}
@@ -113,6 +133,25 @@ SpriteAtlas:
   - {fileID: -890519222, guid: cc5541ad3b80b4c46aa4fd2d9b46ba90, type: 3}
   - {fileID: 599653418, guid: cc5541ad3b80b4c46aa4fd2d9b46ba90, type: 3}
   m_PackedSpriteNamesToIndex:
+  - RainyMountainsBossHouse_18
+  - RainyMountainsBossHouse_15
+  - RainyMountainsBossHouse_14
+  - RainyMountainsBossHouse_17
+  - RainyMountainsBossHouse_16
+  - RainyMountainsBossHouse_11
+  - RainyMountainsBossHouse_10
+  - RainyMountainsBossHouse_13
+  - RainyMountainsBossHouse_12
+  - RainyMountainsBossHouse_8
+  - RainyMountainsBossHouse_9
+  - RainyMountainsBossHouse_6
+  - RainyMountainsBossHouse_7
+  - RainyMountainsBossHouse_4
+  - RainyMountainsBossHouse_5
+  - RainyMountainsBossHouse_2
+  - RainyMountainsBossHouse_3
+  - RainyMountainsBossHouse_0
+  - RainyMountainsBossHouse_1
   - Black
   - Castle1_5
   - Castle1_4
