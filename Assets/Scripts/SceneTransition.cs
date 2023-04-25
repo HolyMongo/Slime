@@ -9,6 +9,7 @@ public class SceneTransition : MonoBehaviour
     public int secBeforeLoadingScene = 1;
     public Animator anim;
 
+   
     public void LoadScene()
     {
         StartCoroutine(LoadNextScene());
@@ -23,7 +24,8 @@ public class SceneTransition : MonoBehaviour
         anim.SetTrigger("Start");
 
         yield return new WaitForSeconds(secBeforeLoadingScene);
-
+      
         SceneManager.LoadScene(SceneToLoad);
     }
+  
 }

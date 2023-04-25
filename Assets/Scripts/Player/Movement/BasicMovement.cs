@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 
 public class BasicMovement : MonoBehaviour, IDataPersistence
 {
@@ -192,9 +194,26 @@ public class BasicMovement : MonoBehaviour, IDataPersistence
     public void LoadData(GameData data)
     {
         this.transform.position = data.PlayerPosition;
+        if (SceneManager.GetActiveScene().name == "Tutorial" && data.trueOfCourse1 == false)
+        {
+            this.transform.position = new Vector3(-16f, -0.5f, 0f);
+            data.trueOfCourse1 = true;
+        }
+        if (SceneManager.GetActiveScene().name == "FlowerForest" && data.trueOfCourse2 == false)
+        {
+            this.transform.position = new Vector3(-283.7f, 63.9f, 01644756f);
+            data.trueOfCourse2 = true;
+        }
+        if (SceneManager.GetActiveScene().name == "RainyMountains" && data.trueOfCourse3 == false)
+        {
+            this.transform.position = new Vector3(-8.333063f, -4.634978f, 0.016447560f);
+            data.trueOfCourse3 = true;
+        }
+       
     }
     public void SaveData(ref GameData data)
     {
+
         data.PlayerPosition = this.transform.position;
     }
 }
